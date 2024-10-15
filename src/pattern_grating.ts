@@ -15,11 +15,14 @@ export function patternGrating(
 		for (let x = 0; x < width; x++) {
 			const i = (y * width + x) * 4
 			const value = pattern(x, y)
+			const { r, g, b, alpha } = typeof value === 'number'
+				? { r: value, g: value, b: value, alpha: 255 }
+				: value
 
-			pixels[i] = value // red
-			pixels[i + 1] = value // green
-			pixels[i + 2] = value // blue
-			pixels[i + 3] = 255 // alpha
+			pixels[i] = r // red
+			pixels[i + 1] = g // green
+			pixels[i + 2] = b // blue
+			pixels[i + 3] = alpha // alpha
 		}
 	}
 
