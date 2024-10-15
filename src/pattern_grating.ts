@@ -1,8 +1,13 @@
+import { assertIsPositiveInteger } from './asserts.ts'
+
 export function patternGrating(
 	width: number,
 	height: number,
 	pattern: (x: number, y: number) => number,
 ): Uint8ClampedArray {
+	assertIsPositiveInteger(width, { name: 'image_width' })
+	assertIsPositiveInteger(height, { name: 'image_height' })
+
 	const pixels = new Uint8ClampedArray(width * height * 4)
 
 	for (let y = 0; y < height; y++) {

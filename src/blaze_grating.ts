@@ -1,3 +1,5 @@
+import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
+
 export type Blaze = {
 	max: number
 	count: number
@@ -8,6 +10,15 @@ export function fillBlazeGrating(
 	height: number,
 	blaze: Blaze,
 ): Uint8ClampedArray {
+	assertIsPositiveInteger(width, { name: 'image_width' })
+	assertIsPositiveInteger(height, { name: 'image_height' })
+	assertIsPositiveInteger(blaze.max, { name: 'blaze.max' })
+	assertIsPositiveInteger(blaze.count, { name: 'blaze.count' })
+	assertIsBetween(blaze.max, [0, 255], {
+		name: 'blaze.count',
+		exclusive: [false, false],
+	})
+
 	const pixels = new Uint8ClampedArray(width * height * 4)
 
 	if (blaze.count > width) {
