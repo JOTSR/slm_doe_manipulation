@@ -1,0 +1,8 @@
+{
+	"name": "@-/mask-builder",
+	"fmt": {
+		"singleQuote": true,
+		"semiColons": false,
+		"useTabs": true
+	}
+}
