@@ -5,7 +5,7 @@ export type Blaze = {
 	count: number
 }
 
-export function fillBlazeGrating(
+export function blazeGrating(
 	width: number,
 	height: number,
 	blaze: Blaze,
