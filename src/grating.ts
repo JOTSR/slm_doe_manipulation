@@ -2,7 +2,7 @@ import type { Pixel } from '../types.ts'
 import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
 
 export class Grating<Width extends number, Height extends number> {
-	#pixels: Uint8ClampedArray
+	#rawPixels: Uint8ClampedArray
 	#width: Width
 	#height: Height
 
@@ -10,13 +10,32 @@ export class Grating<Width extends number, Height extends number> {
 		assertIsPositiveInteger(width, { name: 'grating_width' })
 		assertIsPositiveInteger(height, { name: 'grating_height' })
 
-		this.#pixels = new Uint8ClampedArray(width * height * 4)
+		this.#rawPixels = new Uint8ClampedArray(width * height * 4)
 		this.#width = width
 		this.#height = height
 	}
 
-	get pixels(): Uint8ClampedArray {
-		return this.#pixels
+	get rawPixels(): Uint8ClampedArray {
+		return this.#rawPixels
+	}
+
+	get pixels(): { x: number; y: number; pixel: Pixel }[] {
+		const pixels: { x: number; y: number; pixel: Pixel }[] = []
+
+		for (let index = 0; index < this.#rawPixels.length; index += 4) {
+			pixels.push({
+				x: Math.trunc(index / 4) % (this.#width * 4),
+				y: Math.trunc(index / (this.#width * 4)),
+				pixel: {
+					r: this.#rawPixels[index],
+					g: this.#rawPixels[index + 1],
+					b: this.#rawPixels[index + 2],
+					alpha: this.#rawPixels[index + 3],
+				},
+			})
+		}
+
+		return pixels
 	}
 
 	get size(): { width: Width; height: Height } {
@@ -41,10 +60,10 @@ export class Grating<Width extends number, Height extends number> {
 		const index = 4 * (x + y * this.#width)
 
 		return {
-			r: this.#pixels[index],
-			g: this.#pixels[index + 1],
-			b: this.#pixels[index + 2],
-			alpha: this.#pixels[index + 3],
+			r: this.#rawPixels[index],
+			g: this.#rawPixels[index + 1],
+			b: this.#rawPixels[index + 2],
+			alpha: this.#rawPixels[index + 3],
 		}
 	}
 
@@ -62,10 +81,10 @@ export class Grating<Width extends number, Height extends number> {
 
 		const index = 4 * (x + y * this.#width)
 
-		this.#pixels[index] = r
-		this.#pixels[index + 1] = g
-		this.#pixels[index + 2] = b
-		this.#pixels[index + 3] = alpha
+		this.#rawPixels[index] = r
+		this.#rawPixels[index + 1] = g
+		this.#rawPixels[index + 2] = b
+		this.#rawPixels[index + 3] = alpha
 	}
 
 	getPixelMono(x: number, y: number): number {
@@ -88,6 +107,110 @@ export class Grating<Width extends number, Height extends number> {
 	}
 
 	get image(): ImageData {
-		return new ImageData(this.#pixels, this.#width, this.#height)
+		return new ImageData(this.#rawPixels, this.#width, this.#height)
+	}
+
+	// operations
+	add(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const addPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] += addPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	substract(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const addPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] -= addPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	multiply(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const addPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] += addPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	divide(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const addPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] += addPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	//transformations
+	oppose(): Grating<Width, Height> {
+		return this.mapRawPixels((value) => 255 - value)
+	}
+
+	invert(): Grating<Width, Height> {
+		return this.mapRawPixels((value) => 255 / value)
+	}
+
+	//manipulations
+	clone(): Grating<Width, Height> {
+		const clone = new Grating(this.size.width, this.size.height)
+		clone.#rawPixels = this.#rawPixels.slice()
+		return clone
+	}
+
+	mapRawPixels(
+		mapFn: (value: number, index: number, array: Uint8ClampedArray) => number,
+	): Grating<Width, Height> {
+		const clone = new Grating(this.size.width, this.size.height)
+		clone.#rawPixels = this.#rawPixels.map(mapFn)
+		return clone
+	}
+
+	mapPixels(
+		mapFn: (
+			value: { x: number; y: number; pixel: Pixel },
+			index: number,
+			array: { x: number; y: number; pixel: Pixel }[],
+		) => { x: number; y: number; pixel: Pixel },
+	): Grating<Width, Height> {
+		const clone = new Grating(this.size.width, this.size.height)
+		this.pixels.forEach((value, index, array) => {
+			const mapped = mapFn(value, index, array)
+			clone.setPixel(mapped.x, mapped.y, mapped.pixel)
+		})
+		return clone
 	}
 }

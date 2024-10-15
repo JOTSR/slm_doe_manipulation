@@ -25,7 +25,7 @@ export function blazeGrating<Width extends number, Height extends number>(
 	}
 
 	const grating = new Grating(width, height)
-	const pixels = grating.pixels
+	const pixels = grating.rawPixels
 
 	const slope = blaze.count * (blaze.max / 255)
 	const clamp = width / blaze.count
