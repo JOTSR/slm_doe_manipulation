@@ -1,17 +1,16 @@
 import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
+import { Grating } from './grating.ts'
 
 export type Blaze = {
 	max: number
 	count: number
 }
 
-export function blazeGrating(
-	width: number,
-	height: number,
+export function blazeGrating<Width extends number, Height extends number>(
+	width: Width,
+	height: Height,
 	blaze: Blaze,
-): Uint8ClampedArray {
-	assertIsPositiveInteger(width, { name: 'image_width' })
-	assertIsPositiveInteger(height, { name: 'image_height' })
+): Grating<Width, Height> {
 	assertIsPositiveInteger(blaze.max, { name: 'blaze.max' })
 	assertIsPositiveInteger(blaze.count, { name: 'blaze.count' })
 	assertIsBetween(blaze.max, [0, 255], {
@@ -19,13 +18,14 @@ export function blazeGrating(
 		exclusive: [false, false],
 	})
 
-	const pixels = new Uint8ClampedArray(width * height * 4)
-
 	if (blaze.count > width) {
 		throw new RangeError(
 			`blaze count of ${blaze.count} can't fit in ${width} pixels width`,
 		)
 	}
+
+	const grating = new Grating(width, height)
+	const pixels = grating.pixels
 
 	const slope = blaze.count * (blaze.max / 255)
 	const clamp = width / blaze.count
@@ -40,5 +40,5 @@ export function blazeGrating(
 		pixels[i + 3] = 255 //alpha
 	}
 
-	return pixels
+	return grating
 }

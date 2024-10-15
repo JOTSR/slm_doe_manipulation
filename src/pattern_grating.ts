@@ -1,30 +1,24 @@
 import type { Pattern } from '../types.ts'
-import { assertIsPositiveInteger } from './asserts.ts'
+import { Grating } from './grating.ts'
 
-export function patternGrating(
-	width: number,
-	height: number,
+export function patternGrating<Width extends number, Height extends number>(
+	width: Width,
+	height: Height,
 	pattern: Pattern,
-): Uint8ClampedArray {
-	assertIsPositiveInteger(width, { name: 'image_width' })
-	assertIsPositiveInteger(height, { name: 'image_height' })
-
-	const pixels = new Uint8ClampedArray(width * height * 4)
+): Grating<Width, Height> {
+	const grating = new Grating(width, height)
 
 	for (let y = 0; y < height; y++) {
 		for (let x = 0; x < width; x++) {
-			const i = (y * width + x) * 4
 			const value = pattern(x, y)
-			const { r, g, b, alpha } = typeof value === 'number'
-				? { r: value, g: value, b: value, alpha: 255 }
-				: value
 
-			pixels[i] = r // red
-			pixels[i + 1] = g // green
-			pixels[i + 2] = b // blue
-			pixels[i + 3] = alpha // alpha
+			if (typeof value === 'number') {
+				grating.setPixelMono(x, y, value)
+			} else {
+				grating.setPixel(x, y, value)
+			}
 		}
 	}
 
-	return pixels
+	return grating
 }
