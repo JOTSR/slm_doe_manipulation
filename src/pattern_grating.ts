@@ -1,9 +1,10 @@
+import type { Pattern } from '../types.ts'
 import { assertIsPositiveInteger } from './asserts.ts'
 
 export function patternGrating(
 	width: number,
 	height: number,
-	pattern: (x: number, y: number) => number,
+	pattern: Pattern,
 ): Uint8ClampedArray {
 	assertIsPositiveInteger(width, { name: 'image_width' })
 	assertIsPositiveInteger(height, { name: 'image_height' })
