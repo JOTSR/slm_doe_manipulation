@@ -14,7 +14,7 @@ export class Grating<Width extends number, Height extends number> {
 		assertEquals(img.width, width, { name: 'img.width' })
 		assertEquals(img.height, height, { name: 'img.height' })
 
-		const grating = new Grating<Width, Height>(width, height)
+		const grating = new Grating(width, height)
 		grating.#rawPixels = new Uint8Array(img.data)
 		return grating
 	}
