@@ -25,3 +25,13 @@ export function assertIsBetween(
 		)
 	}
 }
+
+export function assertEquals(
+	valueA: number,
+	valueB: number,
+	{ name }: { name: string } = { name: 'value' },
+): void {
+	if (valueA !== valueB) {
+		throw new RangeError(`"${name}": ${valueA} must be equals to ${valueB}`)
+	}
+}
