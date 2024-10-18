@@ -1,4 +1,4 @@
-import type { Pixel } from '../types.ts'
+import type { Pattern, Pixel } from '../types.ts'
 import {
 	assertEquals,
 	assertIsBetween,
@@ -16,6 +16,28 @@ export class Grating<Width extends number, Height extends number> {
 
 		const grating = new Grating<Width, Height>(width, height)
 		grating.#rawPixels = new Uint8Array(img.data)
+		return grating
+	}
+
+	static fromPattern<Width extends number, Height extends number>(
+		width: Width,
+		height: Height,
+		pattern: Pattern,
+	): Grating<Width, Height> {
+		const grating = new Grating(width, height)
+
+		for (let y = 0; y < height; y++) {
+			for (let x = 0; x < width; x++) {
+				const value = pattern(x, y)
+
+				if (typeof value === 'number') {
+					grating.setPixelMono(x, y, value)
+				} else {
+					grating.setPixel(x, y, value)
+				}
+			}
+		}
+
 		return grating
 	}
 
