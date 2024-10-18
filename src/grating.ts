@@ -2,7 +2,7 @@ import type { Pixel } from '../types.ts'
 import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
 
 export class Grating<Width extends number, Height extends number> {
-	#rawPixels: Uint8ClampedArray
+	#rawPixels: Uint8Array
 	#width: Width
 	#height: Height
 
@@ -10,12 +10,12 @@ export class Grating<Width extends number, Height extends number> {
 		assertIsPositiveInteger(width, { name: 'grating_width' })
 		assertIsPositiveInteger(height, { name: 'grating_height' })
 
-		this.#rawPixels = new Uint8ClampedArray(width * height * 4)
+		this.#rawPixels = new Uint8Array(width * height * 4)
 		this.#width = width
 		this.#height = height
 	}
 
-	get rawPixels(): Uint8ClampedArray {
+	get rawPixels(): Uint8Array {
 		return this.#rawPixels
 	}
 
@@ -107,7 +107,11 @@ export class Grating<Width extends number, Height extends number> {
 	}
 
 	get image(): ImageData {
-		return new ImageData(this.#rawPixels, this.#width, this.#height)
+		return new ImageData(
+			Uint8ClampedArray.from(this.#rawPixels),
+			this.#width,
+			this.#height,
+		)
 	}
 
 	// operations
@@ -192,7 +196,7 @@ export class Grating<Width extends number, Height extends number> {
 	}
 
 	mapRawPixels(
-		mapFn: (value: number, index: number, array: Uint8ClampedArray) => number,
+		mapFn: (value: number, index: number, array: Uint8Array) => number,
 	): Grating<Width, Height> {
 		const clone = new Grating(this.size.width, this.size.height)
 		clone.#rawPixels = this.#rawPixels.map(mapFn)
