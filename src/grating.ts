@@ -1,7 +1,24 @@
 import type { Pixel } from '../types.ts'
-import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
+import {
+	assertEquals,
+	assertIsBetween,
+	assertIsPositiveInteger,
+} from './asserts.ts'
 
 export class Grating<Width extends number, Height extends number> {
+	static fromImageData<Width extends number, Height extends number>(
+		img: ImageData,
+		width: Width,
+		height: Height,
+	): Grating<Width, Height> {
+		assertEquals(img.width, width, { name: 'img.width' })
+		assertEquals(img.height, height, { name: 'img.height' })
+
+		const grating = new Grating<Width, Height>(width, height)
+		grating.#rawPixels = new Uint8Array(img.data)
+		return grating
+	}
+
 	#rawPixels: Uint8Array
 	#width: Width
 	#height: Height
