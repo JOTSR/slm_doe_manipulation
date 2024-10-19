@@ -21,3 +21,7 @@ export function rect(
 
 	return (x, y) => 255 * Number(!(x > xMin && x < xMax && y > yMin && y < yMax))
 }
+
+export function random(min = 0, max = 255): Pattern {
+	return () => (max - min) * Math.random() + min
+}
