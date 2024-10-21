@@ -1,11 +1,38 @@
 import { assertIsBetween, assertIsPositiveInteger } from './asserts.ts'
 import { Grating } from './grating.ts'
 
+/**
+ * Blaze grating configuration.
+ *
+ * @property max - Max height of the grating between 0 and 255 (as 0 and 2π).
+ * @property count - Number of vertical blades of the grating.
+ *
+ * @example Example
+ * ```ts
+ * const blaze = {
+ * 	max: 255 // i.e 0-2π in phase space.
+ * 	count: 25 // i.e approximatively 10px width on a 256 pixel width screen.
+ * }
+ * ```
+ */
 export type Blaze = {
 	max: number
 	count: number
 }
 
+/**
+ * Make a grating filled with a blaze diffraction pattern.
+ *
+ * @param width - Width of the display screen.
+ * @param height - Height of the display screen.
+ * @param blaze - Configuration of the pattern.
+ * @returns Grating with the specified width and height filled with blaze pattern.
+ *
+ * @example Usage
+ * ```ts
+ * const grating = blazeGrating(256, 256, { count: 25, height: 255 })
+ * ```
+ */
 export function blazeGrating<Width extends number, Height extends number>(
 	width: Width,
 	height: Height,
