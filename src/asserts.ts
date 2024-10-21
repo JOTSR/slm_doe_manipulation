@@ -41,8 +41,8 @@ export function assertIsBetween(
  * try {
  * 	const myConstant = 1
  * 	assertEquals(myConstant, 2, { name: 'myConstant' })
- * } catch (e) {
- * 	console.error(e)
+ * } catch {
+ * 	//RangeError: "myConstant": 1 must be equals to 2
  * }
  * ```
  */
@@ -51,7 +51,7 @@ export function assertEquals(
 	valueB: number,
 	{ name }: { name: string } = { name: 'value' },
 ): void {
-	if (valueA !== valueB) {
+	if (Math.abs(valueA - valueB) > Number.EPSILON) {
 		throw new RangeError(`"${name}": ${valueA} must be equals to ${valueB}`)
 	}
 }
