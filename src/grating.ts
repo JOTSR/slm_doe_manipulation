@@ -5,11 +5,34 @@ import {
 	assertIsPositiveInteger,
 } from './asserts.ts'
 
+/**
+ * Abstraction of a grating.
+ * Provides many helpers to manipulate grating.
+ *
+ * @exmaple Usage
+ * ```ts
+ * const linearGrating = Grating.fromPattern(256, 256, (x, y) => x + y)
+ * const blankGrating = new Grating(256, 256)
+ *
+ * console.assert(blankGrating.size.width === 256)
+ * console.assert(linearGrating.getPixelMono(20, 50) === 20 + 50)
+ *
+ * const composedGrating = linearGrating.add(blankGrating)
+ * ```
+ */
 export class Grating<Width extends number, Height extends number> {
+	/**
+	 * Construct a new grating from an ImageData (eg: from a canvas).
+	 *
+	 * @param width - Screen/Grating width.
+	 * @param height - Screen/Grating height.
+	 * @param img - Source image to draw.
+	 * @returns newly constructed Grating corresponding to the input image.
+	 */
 	static fromImageData<Width extends number, Height extends number>(
-		img: ImageData,
 		width: Width,
 		height: Height,
+		img: ImageData,
 	): Grating<Width, Height> {
 		assertEquals(img.width, width, { name: 'img.width' })
 		assertEquals(img.height, height, { name: 'img.height' })
@@ -19,6 +42,14 @@ export class Grating<Width extends number, Height extends number> {
 		return grating
 	}
 
+	/**
+	 * Construct a new grating already filled with a custom pattern.
+	 *
+	 * @param width - Screen/Grating width.
+	 * @param height - Screen/Grating height.
+	 * @param pattern - Pattern to draw.
+	 * @returns newly constructed Grating corresponding to the pattern.
+	 */
 	static fromPattern<Width extends number, Height extends number>(
 		width: Width,
 		height: Height,
@@ -45,6 +76,12 @@ export class Grating<Width extends number, Height extends number> {
 	#width: Width
 	#height: Height
 
+	/**
+	 * Construct a blank grating.
+	 *
+	 * @param width - Screen/Grating width.
+	 * @param height - Screen/Grating height.
+	 */
 	constructor(width: Width, height: Height) {
 		assertIsPositiveInteger(width, { name: 'grating_width' })
 		assertIsPositiveInteger(height, { name: 'grating_height' })
@@ -54,10 +91,20 @@ export class Grating<Width extends number, Height extends number> {
 		this.#height = height
 	}
 
+	/**
+	 * Access to the raw pixel buffer of the grating for better performance computations.
+	 *
+	 * @return __rgba__ buffer of length `Grating.size.width * Grating.size.heigth * 4`
+	 */
 	get rawPixels(): Uint8Array {
 		return this.#rawPixels
 	}
 
+	/**
+	 * Get a list of __rgba__ pixels with their coordinates.
+	 *
+	 * @returns pixels with their associated coordinates.
+	 */
 	get pixels(): { x: number; y: number; pixel: Pixel }[] {
 		const pixels: { x: number; y: number; pixel: Pixel }[] = []
 
@@ -77,6 +124,9 @@ export class Grating<Width extends number, Height extends number> {
 		return pixels
 	}
 
+	/**
+	 * Get the size of the Grating.
+	 */
 	get size(): { width: Width; height: Height } {
 		return {
 			width: this.#width,
@@ -84,6 +134,11 @@ export class Grating<Width extends number, Height extends number> {
 		}
 	}
 
+	/**
+	 * Get a specific pixel from its coordinates.
+	 *
+	 * @returns pixel at (x, y).
+	 */
 	getPixel(x: number, y: number): Pixel {
 		assertIsPositiveInteger(x, { name: 'pixel_x' })
 		assertIsPositiveInteger(y, { name: 'pixel_y' })
@@ -106,6 +161,9 @@ export class Grating<Width extends number, Height extends number> {
 		}
 	}
 
+	/**
+	 * Set a specific pixel from its coordinates.
+	 */
 	setPixel(x: number, y: number, { r, g, b, alpha }: Pixel): void {
 		assertIsPositiveInteger(x, { name: 'pixel_x' })
 		assertIsPositiveInteger(y, { name: 'pixel_y' })
@@ -126,6 +184,11 @@ export class Grating<Width extends number, Height extends number> {
 		this.#rawPixels[index + 3] = alpha
 	}
 
+	/**
+	 * Get a specific pixel from its coordinates as monochromatic (luminance) value.
+	 *
+	 * @returns monochromtaic pixel at (x, y).
+	 */
 	getPixelMono(x: number, y: number): number {
 		const { r, b, g, alpha } = this.getPixel(x, y)
 		if (alpha !== 255) {
@@ -136,6 +199,9 @@ export class Grating<Width extends number, Height extends number> {
 		return Math.round(0.2126 * r + 0.7152 * g + 0.0722 * g)
 	}
 
+	/**
+	 * Set a specific pixel from its coordinates as monochromatic (luminance) value.
+	 */
 	setPixelMono(x: number, y: number, brightness: number): void {
 		this.setPixel(x, y, {
 			r: brightness,
@@ -145,6 +211,9 @@ export class Grating<Width extends number, Height extends number> {
 		})
 	}
 
+	/**
+	 * Get the bitmap image corresponding the the Grating as an `ImageData`.
+	 */
 	get image(): ImageData {
 		return new ImageData(
 			Uint8ClampedArray.from(this.#rawPixels),
@@ -153,7 +222,10 @@ export class Grating<Width extends number, Height extends number> {
 		)
 	}
 
-	// operations
+	/**
+	 * Add to grating and return a new grating resulted from the pixel per pixel addition modulo 256.
+	 * Source gratings are left intact.
+	 */
 	add(
 		...gratings: Grating<Width, Height>[]
 	): Grating<Width, Height> {
@@ -170,6 +242,10 @@ export class Grating<Width extends number, Height extends number> {
 		return result
 	}
 
+	/**
+	 * Add to current grating and return a new grating resulted from the pixel per pixel addition modulo 256.
+	 * Source gratings are left intact.
+	 */
 	substract(
 		...gratings: Grating<Width, Height>[]
 	): Grating<Width, Height> {
@@ -186,6 +262,10 @@ export class Grating<Width extends number, Height extends number> {
 		return result
 	}
 
+	/**
+	 * Multiply current grating and return a new grating resulted from the pixel per pixel multiplication modulo 256.
+	 * Source gratings are left intact.
+	 */
 	multiply(
 		...gratings: Grating<Width, Height>[]
 	): Grating<Width, Height> {
@@ -202,6 +282,10 @@ export class Grating<Width extends number, Height extends number> {
 		return result
 	}
 
+	/**
+	 * Divide current grating and return a new grating resulted from the pixel per pixel division modulo 256.
+	 * Source gratings are left intact.
+	 */
 	divide(
 		...gratings: Grating<Width, Height>[]
 	): Grating<Width, Height> {
@@ -218,22 +302,32 @@ export class Grating<Width extends number, Height extends number> {
 		return result
 	}
 
-	//transformations
+	/**
+	 * Get a new Grating where each pixel is the opposite of the source (255 - pixel_component).
+	 */
 	oppose(): Grating<Width, Height> {
 		return this.mapRawPixels((value) => 255 - value)
 	}
 
+	/**
+	 * Get a new Grating where each pixel is the invert of the source (255 / pixel_component) % 256.
+	 */
 	invert(): Grating<Width, Height> {
 		return this.mapRawPixels((value) => 255 / value)
 	}
 
-	//manipulations
+	/**
+	 * Clone the current Grating and return a new Grating with same size and same pixels.
+	 */
 	clone(): Grating<Width, Height> {
 		const clone = new Grating(this.size.width, this.size.height)
 		clone.#rawPixels = this.#rawPixels.slice()
 		return clone
 	}
 
+	/**
+	 * Clone the current Grating but replace each pixel (as u8 number) with the mapping callback.
+	 */
 	mapRawPixels(
 		mapFn: (value: number, index: number, array: Uint8Array) => number,
 	): Grating<Width, Height> {
@@ -242,6 +336,9 @@ export class Grating<Width extends number, Height extends number> {
 		return clone
 	}
 
+	/**
+	 * Clone the current Grating but replace each pixel as (rgba value with coordinates) with the mapping callback.
+	 */
 	mapPixels(
 		mapFn: (
 			value: { x: number; y: number; pixel: Pixel },
