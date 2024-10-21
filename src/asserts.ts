@@ -53,9 +53,9 @@ export function assertIsBetween(
 		exclusive: [boolean, boolean]
 	} = { name: 'value', exclusive: [false, false] },
 ): void {
-	const leftBound = exclusive[0] ? value <= bounds[0] : value < bounds[0]
-	const rightBound = exclusive[1] ? value <= bounds[1] : value < bounds[1]
-	if (leftBound || rightBound) {
+	const leftBound = exclusive[0] ? value > bounds[0] : value >= bounds[0]
+	const rightBound = exclusive[1] ? value < bounds[1] : value <= bounds[1]
+	if (!(leftBound && rightBound)) {
 		throw new RangeError(
 			`"${name}: ${value}" must be ${exclusive[0] ? '>' : '>='} ${
 				bounds[0]
