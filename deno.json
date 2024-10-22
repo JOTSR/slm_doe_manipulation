@@ -1,16 +1,8 @@
 {
-	"name": "@-/grating-builder",
+	"name": "@-/core",
 	"version": "0.1.0",
 	"exports": {
 		".": "./mod.ts",
 		"./patterns": "./src/common_patterns.ts"
-	},
-	"workspace": {
-		"members": []
-	},
-	"fmt": {
-		"singleQuote": true,
-		"semiColons": false,
-		"useTabs": true
 	}
 }
