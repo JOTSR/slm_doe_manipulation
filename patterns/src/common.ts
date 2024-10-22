@@ -1,4 +1,4 @@
-import type { Pattern } from '../types.ts'
+import type { Pattern } from '../../types.ts'
 
 /**
  * Provide a pattern that draw a b&w circle.
