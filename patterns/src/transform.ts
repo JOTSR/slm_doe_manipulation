@@ -26,8 +26,8 @@ export class PatternTransformer {
 
 	scale(scaleX: number, scaleY: number): this {
 		this.#transforms.push((x: number, y: number) => ({
-			x: x * scaleX,
-			y: y * scaleY,
+			x: x / scaleX,
+			y: y / scaleY,
 		}))
 		return this
 	}
