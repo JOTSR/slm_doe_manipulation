@@ -29,11 +29,10 @@ export function hermiteGaussKinoform(
 	const hermiteQ = hermitepoly.factory(q)
 
 	const prefactor = Math.SQRT2 / w0
-	const firstExp = Math.exp(-1 / w0 ** 2)
+	const w2 = w0 ** 2
 
 	return (x, y) =>
 		hermiteP(prefactor * x) *
 		hermiteQ(prefactor * y) *
-		firstExp *
-		Math.exp(x ** 2 + y ** 2)
+		Math.exp(-(x ** 2 + y ** 2) / w2)
 }
