@@ -1,5 +1,13 @@
-# Grating builder
+# SLM Project workspace
 
-Utilities to build a diffraction pattern on a SLM.
+## `/core`
 
-<!-- TODO -->
+Creation and manipulation of gratings and patterns.
+
+## `/cli`
+
+**cli** to interact with core API.
+
+## `/gui`
+
+**gui** to interact with core API, control SML display and view camera.

@@ -1,12 +1,30 @@
 {
-	"name": "@-/core",
 	"version": "0.1.0",
-	"exports": {
-		".": "./mod.ts",
-		"./patterns": "./patterns/mod.ts",
-		"./types": "./types.ts"
-	},
+	"workspace": ["core", "cli", "gui"],
 	"imports": {
-		"@stdlib/math-base-tools-hermitepoly": "npm:@stdlib/math-base-tools-hermitepoly@^0.2.2"
+		"preact": "npm:preact@^10.24.3"
+	},
+	"fmt": {
+		"singleQuote": true,
+		"useTabs": true,
+		"semiColons": false
+	},
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"dom.asynciterable",
+			"dom.iterable",
+			"deno.ns"
+		],
+		"jsx": "precompile",
+		"jsxImportSource": "preact",
+		"jsxPrecompileSkipElements": [
+			"a",
+			"img",
+			"source",
+			"body",
+			"html",
+			"head"
+		]
 	}
 }

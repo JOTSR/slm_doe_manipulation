@@ -1,0 +1,1047 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@cliffy/command@^1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@cliffy/flags@1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@cliffy/internal@1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@cliffy/table@1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@fresh/core@^2.0.0-alpha.23": "2.0.0-alpha.23",
+    "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
+    "jsr:@luca/esbuild-deno-loader@0.11": "0.11.0",
+    "jsr:@std/bytes@^1.0.2": "1.0.2",
+    "jsr:@std/crypto@1": "1.0.3",
+    "jsr:@std/datetime@~0.225.2": "0.225.2",
+    "jsr:@std/encoding@1": "1.0.5",
+    "jsr:@std/encoding@1.0.5": "1.0.5",
+    "jsr:@std/encoding@^1.0.5": "1.0.5",
+    "jsr:@std/fmt@1": "1.0.2",
+    "jsr:@std/fmt@~1.0.2": "1.0.2",
+    "jsr:@std/fs@1": "1.0.4",
+    "jsr:@std/fs@^1.0.4": "1.0.4",
+    "jsr:@std/html@1": "1.0.3",
+    "jsr:@std/jsonc@1": "1.0.1",
+    "jsr:@std/media-types@1": "1.0.3",
+    "jsr:@std/path@1": "1.0.6",
+    "jsr:@std/path@^1.0.6": "1.0.6",
+    "jsr:@std/semver@1": "1.0.3",
+    "jsr:@std/text@~1.0.7": "1.0.7",
+    "npm:@preact/signals@1.3.0": "1.3.0_preact@10.24.3",
+    "npm:@preact/signals@^1.2.3": "1.3.0_preact@10.24.3",
+    "npm:@preact/signals@^1.3.0": "1.3.0_preact@10.24.3",
+    "npm:@stdlib/math-base-tools-hermitepoly@~0.2.2": "0.2.2",
+    "npm:esbuild-wasm@0.23.1": "0.23.1",
+    "npm:esbuild@0.23.1": "0.23.1",
+    "npm:preact-render-to-string@^6.5.11": "6.5.11_preact@10.24.3",
+    "npm:preact@10.24.3": "10.24.3",
+    "npm:preact@^10.24.1": "10.24.3",
+    "npm:preact@^10.24.3": "10.24.3"
+  },
+  "jsr": {
+    "@cliffy/command@1.0.0-rc.7": {
+      "integrity": "1288808d7a3cd18b86c24c2f920e47a6d954b7e23cadc35c8cbd78f8be41f0cd",
+      "dependencies": [
+        "jsr:@cliffy/flags",
+        "jsr:@cliffy/internal",
+        "jsr:@cliffy/table",
+        "jsr:@std/fmt@~1.0.2",
+        "jsr:@std/text"
+      ]
+    },
+    "@cliffy/flags@1.0.0-rc.7": {
+      "integrity": "318d9be98f6a6417b108e03dec427dea96cdd41a15beb21d2554ae6da450a781",
+      "dependencies": [
+        "jsr:@std/text"
+      ]
+    },
+    "@cliffy/internal@1.0.0-rc.7": {
+      "integrity": "10412636ab3e67517d448be9eaab1b70c88eba9be22617b5d146257a11cc9b17"
+    },
+    "@cliffy/table@1.0.0-rc.7": {
+      "integrity": "9fdd9776eda28a0b397981c400eeb1aa36da2371b43eefe12e6ff555290e3180",
+      "dependencies": [
+        "jsr:@std/fmt@~1.0.2"
+      ]
+    },
+    "@fresh/core@2.0.0-alpha.23": {
+      "integrity": "531122329cde29b21c527dd04c5e04e5d4882ffc292302378c218ef0d4ab5f03",
+      "dependencies": [
+        "jsr:@luca/esbuild-deno-loader",
+        "jsr:@std/crypto",
+        "jsr:@std/datetime",
+        "jsr:@std/encoding@1",
+        "jsr:@std/fmt@1",
+        "jsr:@std/fs@1",
+        "jsr:@std/html",
+        "jsr:@std/jsonc",
+        "jsr:@std/media-types",
+        "jsr:@std/path@1",
+        "jsr:@std/semver",
+        "npm:@preact/signals@^1.2.3",
+        "npm:esbuild",
+        "npm:esbuild-wasm",
+        "npm:preact-render-to-string",
+        "npm:preact@^10.24.1",
+        "npm:preact@^10.24.3"
+      ]
+    },
+    "@gfx/canvas-wasm@0.4.2": {
+      "integrity": "d653be3bd12cb2fa9bbe5d1b1f041a81b91d80b68502761204aaf60e4592532a",
+      "dependencies": [
+        "jsr:@std/encoding@1.0.5"
+      ]
+    },
+    "@luca/esbuild-deno-loader@0.11.0": {
+      "integrity": "c05a989aa7c4ee6992a27be5f15cfc5be12834cab7ff84cabb47313737c51a2c",
+      "dependencies": [
+        "jsr:@std/bytes",
+        "jsr:@std/encoding@^1.0.5",
+        "jsr:@std/path@^1.0.6"
+      ]
+    },
+    "@std/bytes@1.0.2": {
+      "integrity": "fbdee322bbd8c599a6af186a1603b3355e59a5fb1baa139f8f4c3c9a1b3e3d57"
+    },
+    "@std/crypto@1.0.3": {
+      "integrity": "a2a32f51ddef632d299e3879cd027c630dcd4d1d9a5285d6e6788072f4e51e7f"
+    },
+    "@std/datetime@0.225.2": {
+      "integrity": "45f0100554a912cd65f48089ef0a33aa1eb6ea21f08090840b539ab582827eaa"
+    },
+    "@std/encoding@1.0.5": {
+      "integrity": "ecf363d4fc25bd85bd915ff6733a7e79b67e0e7806334af15f4645c569fefc04"
+    },
+    "@std/fmt@1.0.2": {
+      "integrity": "87e9dfcdd3ca7c066e0c3c657c1f987c82888eb8103a3a3baa62684ffeb0f7a7"
+    },
+    "@std/fs@1.0.4": {
+      "integrity": "2907d32d8d1d9e540588fd5fe0ec21ee638134bd51df327ad4e443aaef07123c",
+      "dependencies": [
+        "jsr:@std/path@^1.0.6"
+      ]
+    },
+    "@std/html@1.0.3": {
+      "integrity": "7a0ac35e050431fb49d44e61c8b8aac1ebd55937e0dc9ec6409aa4bab39a7988"
+    },
+    "@std/jsonc@1.0.1": {
+      "integrity": "6b36956e2a7cbb08ca5ad7fbec72e661e6217c202f348496ea88747636710dda"
+    },
+    "@std/media-types@1.0.3": {
+      "integrity": "b12d30a7852f7578f4d210622df713bbfd1cbdd9b4ec2eaf5c1845ab70bab159"
+    },
+    "@std/path@1.0.6": {
+      "integrity": "ab2c55f902b380cf28e0eec501b4906e4c1960d13f00e11cfbcd21de15f18fed"
+    },
+    "@std/semver@1.0.3": {
+      "integrity": "7c139c6076a080eeaa4252c78b95ca5302818d7eafab0470d34cafd9930c13c8"
+    },
+    "@std/text@1.0.7": {
+      "integrity": "344a820af99fde81ae1d4f9ce586da3f47a58cda25ac4c4dd688166cf5ed97f1"
+    }
+  },
+  "npm": {
+    "@esbuild/aix-ppc64@0.23.1": {
+      "integrity": "sha512-6VhYk1diRqrhBAqpJEdjASR/+WVRtfjpqKuNw11cLiaWpAT/Uu+nokB+UJnevzy/P9C/ty6AOe0dwueMrGh/iQ=="
+    },
+    "@esbuild/android-arm64@0.23.1": {
+      "integrity": "sha512-xw50ipykXcLstLeWH7WRdQuysJqejuAGPd30vd1i5zSyKK3WE+ijzHmLKxdiCMtH1pHz78rOg0BKSYOSB/2Khw=="
+    },
+    "@esbuild/android-arm@0.23.1": {
+      "integrity": "sha512-uz6/tEy2IFm9RYOyvKl88zdzZfwEfKZmnX9Cj1BHjeSGNuGLuMD1kR8y5bteYmwqKm1tj8m4cb/aKEorr6fHWQ=="
+    },
+    "@esbuild/android-x64@0.23.1": {
+      "integrity": "sha512-nlN9B69St9BwUoB+jkyU090bru8L0NA3yFvAd7k8dNsVH8bi9a8cUAUSEcEEgTp2z3dbEDGJGfP6VUnkQnlReg=="
+    },
+    "@esbuild/darwin-arm64@0.23.1": {
+      "integrity": "sha512-YsS2e3Wtgnw7Wq53XXBLcV6JhRsEq8hkfg91ESVadIrzr9wO6jJDMZnCQbHm1Guc5t/CdDiFSSfWP58FNuvT3Q=="
+    },
+    "@esbuild/darwin-x64@0.23.1": {
+      "integrity": "sha512-aClqdgTDVPSEGgoCS8QDG37Gu8yc9lTHNAQlsztQ6ENetKEO//b8y31MMu2ZaPbn4kVsIABzVLXYLhCGekGDqw=="
+    },
+    "@esbuild/freebsd-arm64@0.23.1": {
+      "integrity": "sha512-h1k6yS8/pN/NHlMl5+v4XPfikhJulk4G+tKGFIOwURBSFzE8bixw1ebjluLOjfwtLqY0kewfjLSrO6tN2MgIhA=="
+    },
+    "@esbuild/freebsd-x64@0.23.1": {
+      "integrity": "sha512-lK1eJeyk1ZX8UklqFd/3A60UuZ/6UVfGT2LuGo3Wp4/z7eRTRYY+0xOu2kpClP+vMTi9wKOfXi2vjUpO1Ro76g=="
+    },
+    "@esbuild/linux-arm64@0.23.1": {
+      "integrity": "sha512-/93bf2yxencYDnItMYV/v116zff6UyTjo4EtEQjUBeGiVpMmffDNUyD9UN2zV+V3LRV3/on4xdZ26NKzn6754g=="
+    },
+    "@esbuild/linux-arm@0.23.1": {
+      "integrity": "sha512-CXXkzgn+dXAPs3WBwE+Kvnrf4WECwBdfjfeYHpMeVxWE0EceB6vhWGShs6wi0IYEqMSIzdOF1XjQ/Mkm5d7ZdQ=="
+    },
+    "@esbuild/linux-ia32@0.23.1": {
+      "integrity": "sha512-VTN4EuOHwXEkXzX5nTvVY4s7E/Krz7COC8xkftbbKRYAl96vPiUssGkeMELQMOnLOJ8k3BY1+ZY52tttZnHcXQ=="
+    },
+    "@esbuild/linux-loong64@0.23.1": {
+      "integrity": "sha512-Vx09LzEoBa5zDnieH8LSMRToj7ir/Jeq0Gu6qJ/1GcBq9GkfoEAoXvLiW1U9J1qE/Y/Oyaq33w5p2ZWrNNHNEw=="
+    },
+    "@esbuild/linux-mips64el@0.23.1": {
+      "integrity": "sha512-nrFzzMQ7W4WRLNUOU5dlWAqa6yVeI0P78WKGUo7lg2HShq/yx+UYkeNSE0SSfSure0SqgnsxPvmAUu/vu0E+3Q=="
+    },
+    "@esbuild/linux-ppc64@0.23.1": {
+      "integrity": "sha512-dKN8fgVqd0vUIjxuJI6P/9SSSe/mB9rvA98CSH2sJnlZ/OCZWO1DJvxj8jvKTfYUdGfcq2dDxoKaC6bHuTlgcw=="
+    },
+    "@esbuild/linux-riscv64@0.23.1": {
+      "integrity": "sha512-5AV4Pzp80fhHL83JM6LoA6pTQVWgB1HovMBsLQ9OZWLDqVY8MVobBXNSmAJi//Csh6tcY7e7Lny2Hg1tElMjIA=="
+    },
+    "@esbuild/linux-s390x@0.23.1": {
+      "integrity": "sha512-9ygs73tuFCe6f6m/Tb+9LtYxWR4c9yg7zjt2cYkjDbDpV/xVn+68cQxMXCjUpYwEkze2RcU/rMnfIXNRFmSoDw=="
+    },
+    "@esbuild/linux-x64@0.23.1": {
+      "integrity": "sha512-EV6+ovTsEXCPAp58g2dD68LxoP/wK5pRvgy0J/HxPGB009omFPv3Yet0HiaqvrIrgPTBuC6wCH1LTOY91EO5hQ=="
+    },
+    "@esbuild/netbsd-x64@0.23.1": {
+      "integrity": "sha512-aevEkCNu7KlPRpYLjwmdcuNz6bDFiE7Z8XC4CPqExjTvrHugh28QzUXVOZtiYghciKUacNktqxdpymplil1beA=="
+    },
+    "@esbuild/openbsd-arm64@0.23.1": {
+      "integrity": "sha512-3x37szhLexNA4bXhLrCC/LImN/YtWis6WXr1VESlfVtVeoFJBRINPJ3f0a/6LV8zpikqoUg4hyXw0sFBt5Cr+Q=="
+    },
+    "@esbuild/openbsd-x64@0.23.1": {
+      "integrity": "sha512-aY2gMmKmPhxfU+0EdnN+XNtGbjfQgwZj43k8G3fyrDM/UdZww6xrWxmDkuz2eCZchqVeABjV5BpildOrUbBTqA=="
+    },
+    "@esbuild/sunos-x64@0.23.1": {
+      "integrity": "sha512-RBRT2gqEl0IKQABT4XTj78tpk9v7ehp+mazn2HbUeZl1YMdaGAQqhapjGTCe7uw7y0frDi4gS0uHzhvpFuI1sA=="
+    },
+    "@esbuild/win32-arm64@0.23.1": {
+      "integrity": "sha512-4O+gPR5rEBe2FpKOVyiJ7wNDPA8nGzDuJ6gN4okSA1gEOYZ67N8JPk58tkWtdtPeLz7lBnY6I5L3jdsr3S+A6A=="
+    },
+    "@esbuild/win32-ia32@0.23.1": {
+      "integrity": "sha512-BcaL0Vn6QwCwre3Y717nVHZbAa4UBEigzFm6VdsVdT/MbZ38xoj1X9HPkZhbmaBGUD1W8vxAfffbDe8bA6AKnQ=="
+    },
+    "@esbuild/win32-x64@0.23.1": {
+      "integrity": "sha512-BHpFFeslkWrXWyUPnbKm+xYYVYruCinGcftSBaa8zoF9hZO4BcSCFUvHVTtzpIY6YzUnYtuEhZ+C9iEXjxnasg=="
+    },
+    "@preact/signals-core@1.8.0": {
+      "integrity": "sha512-OBvUsRZqNmjzCZXWLxkZfhcgT+Fk8DDcT/8vD6a1xhDemodyy87UJRJfASMuSD8FaAIeGgGm85ydXhm7lr4fyA=="
+    },
+    "@preact/signals@1.3.0_preact@10.24.3": {
+      "integrity": "sha512-EOMeg42SlLS72dhoq6Vjq08havnLseWmPQ8A0YsgIAqMgWgx7V1a39+Pxo6i7SY5NwJtH4849JogFq3M67AzWg==",
+      "dependencies": [
+        "@preact/signals-core",
+        "preact"
+      ]
+    },
+    "@stdlib/array-float32@0.2.2": {
+      "integrity": "sha512-pTcy1FNQrrJLL1LMxJjuVpcKJaibbGCFFTe41iCSXpSOC8SuTBuNohrO6K9+xR301Ruxxn4yrzjJJ6Fa3nQJ2g==",
+      "dependencies": [
+        "@stdlib/assert-has-float32array-support"
+      ]
+    },
+    "@stdlib/array-float64@0.2.2": {
+      "integrity": "sha512-ZmV5wcacGrhT0maw9dfLXNv4N3ZwFUV3D7ItFfZFGFnKIJbubrWzwtaYnxzIXigrDc8g3F6FVHRpsQLMxq0/lA==",
+      "dependencies": [
+        "@stdlib/assert-has-float64array-support"
+      ]
+    },
+    "@stdlib/array-uint16@0.2.2": {
+      "integrity": "sha512-z5c/Izw43HkKfb1pTgEUMAS8GFvhtHkkHZSjX3XJN+17P0VjknxjlSvPiCBGqaDX9jXtlWH3mn1LSyDKtJQoeA==",
+      "dependencies": [
+        "@stdlib/assert-has-uint16array-support"
+      ]
+    },
+    "@stdlib/array-uint32@0.2.2": {
+      "integrity": "sha512-3T894I9C2MqZJJmRCYFTuJp4Qw9RAt+GzYnVPyIXoK1h3TepUXe9VIVx50cUFIibdXycgu0IFGASeAb3YMyupw==",
+      "dependencies": [
+        "@stdlib/assert-has-uint32array-support"
+      ]
+    },
+    "@stdlib/array-uint8@0.2.2": {
+      "integrity": "sha512-Ip9MUC8+10U9x0crMKWkpvfoUBBhWzc6k5SI4lxx38neFVmiJ3f+5MBADEagjpoKSBs71vlY2drnEZe+Gs2Ytg==",
+      "dependencies": [
+        "@stdlib/assert-has-uint8array-support"
+      ]
+    },
+    "@stdlib/assert-has-float32array-support@0.2.2": {
+      "integrity": "sha512-pi2akQl8mVki43fF1GNQVLYW0bHIPp2HuRNThX9GjB3OFQTpvrV8/3zPSh4lOxQa5gRiabgf0+Rgeu3AOhEw9A==",
+      "dependencies": [
+        "@stdlib/assert-is-float32array",
+        "@stdlib/constants-float64-pinf"
+      ]
+    },
+    "@stdlib/assert-has-float64array-support@0.2.2": {
+      "integrity": "sha512-8L3GuKY1o0dJARCOsW9MXcugXapaMTpSG6dGxyNuUVEvFfY5UOzcj9/JIDal5FjqSgqVOGL5qZl2qtRwub34VA==",
+      "dependencies": [
+        "@stdlib/assert-is-float64array"
+      ]
+    },
+    "@stdlib/assert-has-own-property@0.2.2": {
+      "integrity": "sha512-m5rV4Z2/iNkwx2vRsNheM6sQZMzc8rQQOo90LieICXovXZy8wA5jNld4kRKjMNcRt/TjrNP7i2Rhh8hruRDlHg=="
+    },
+    "@stdlib/assert-has-symbol-support@0.2.2": {
+      "integrity": "sha512-vCsGGmDZz5dikGgdF26rIL0y0nHvH7qaVf89HLLTybceuZijAqFSJEqcB3Gpl5uaeueLNAWExHi2EkoUVqKHGg=="
+    },
+    "@stdlib/assert-has-tostringtag-support@0.2.2": {
+      "integrity": "sha512-bSHGqku11VH0swPEzO4Y2Dr+lTYEtjSWjamwqCTC8udOiOIOHKoxuU4uaMGKJjVfXG1L+XefLHqzuO5azxdRaA==",
+      "dependencies": [
+        "@stdlib/assert-has-symbol-support"
+      ]
+    },
+    "@stdlib/assert-has-uint16array-support@0.2.2": {
+      "integrity": "sha512-aL188V7rOkkEH4wYjfpB+1waDO4ULxo5ppGEK6X0kG4YiXYBL2Zyum53bjEQvo0Nkn6ixe18dNzqqWWytBmDeg==",
+      "dependencies": [
+        "@stdlib/assert-is-uint16array",
+        "@stdlib/constants-uint16-max"
+      ]
+    },
+    "@stdlib/assert-has-uint32array-support@0.2.2": {
+      "integrity": "sha512-+UHKP3mZOACkJ9CQjeKNfbXHm5HGQB862V5nV5q3UQlHPzhslnXKyG1SwAxTx+0g88C/2vlDLeqG8H4TH2UTFA==",
+      "dependencies": [
+        "@stdlib/assert-is-uint32array",
+        "@stdlib/constants-uint32-max"
+      ]
+    },
+    "@stdlib/assert-has-uint8array-support@0.2.2": {
+      "integrity": "sha512-VfzrB0BMik9MvPyKcMDJL3waq4nM30RZUrr2EuuQ/RbUpromRWSDbzGTlRq5SfjtJrHDxILPV3rytDCc03dgWA==",
+      "dependencies": [
+        "@stdlib/assert-is-uint8array",
+        "@stdlib/constants-uint8-max"
+      ]
+    },
+    "@stdlib/assert-is-array@0.2.2": {
+      "integrity": "sha512-aJyTX2U3JqAGCATgaAX9ygvDHc97GCIKkIhiZm/AZaLoFHPtMA1atQ4bKcefEC8Um9eefryxTHfFPfSr9CoNQQ==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-big-endian@0.2.2": {
+      "integrity": "sha512-mPEl30/bqZh++UyQbxlyOuB7k0wC73y5J9nD2J6Ud6Fcl76R5IAGHRW0WT3W18is/6jG1jzMd8hrISFyD7N0sA==",
+      "dependencies": [
+        "@stdlib/array-uint16",
+        "@stdlib/array-uint8"
+      ]
+    },
+    "@stdlib/assert-is-boolean@0.2.2": {
+      "integrity": "sha512-3KFLRTYZpX6u95baZ6PubBvjehJs2xBU6+zrenR0jx8KToUYCnJPxqqj7JXRhSD+cOURmcjj9rocVaG9Nz18Pg==",
+      "dependencies": [
+        "@stdlib/assert-has-tostringtag-support",
+        "@stdlib/boolean-ctor",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-buffer@0.2.2": {
+      "integrity": "sha512-4/WMFTEcDYlVbRhxY8Wlqag4S70QCnn6WmQ4wmfiLW92kqQHsLvTNvdt/qqh/SDyDV31R/cpd3QPsVN534dNEA==",
+      "dependencies": [
+        "@stdlib/assert-is-object-like"
+      ]
+    },
+    "@stdlib/assert-is-float32array@0.2.2": {
+      "integrity": "sha512-hxEKz/Y4m1NYuOaiQKoqQA1HeAYwNXFqSk3FJ4hC71DuGNit2tuxucVyck3mcWLpLmqo0+Qlojgwo5P9/C/9MQ==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-float64array@0.2.2": {
+      "integrity": "sha512-3R1wLi6u/IHXsXMtaLnvN9BSpqAJ8tWhwjOOr6kadDqCWsU7Odc7xKLeAXAInAxwnV8VDpO4ifym4A3wehazPQ==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-function@0.2.2": {
+      "integrity": "sha512-whY69DUYWljCJ79Cvygp7VzWGOtGTsh3SQhzNuGt+ut6EsOW+8nwiRkyBXYKf/MOF+NRn15pxg8cJEoeRgsPcA==",
+      "dependencies": [
+        "@stdlib/utils-type-of"
+      ]
+    },
+    "@stdlib/assert-is-little-endian@0.2.2": {
+      "integrity": "sha512-KMzPndj85jDiE1+hYCpw12k2OQOVkfpCo7ojCmCl8366wtKGEaEdGbz1iH98zkxRvnZLSMXcYXI2z3gtdmB0Ag==",
+      "dependencies": [
+        "@stdlib/array-uint16",
+        "@stdlib/array-uint8"
+      ]
+    },
+    "@stdlib/assert-is-number@0.2.2": {
+      "integrity": "sha512-sWpJ59GqGbmlcdYSUV/OYkmQW8k47w10+E0K0zPu1x1VKzhjgA5ZB2sJcpgI8Vt3ckRLjdhuc62ZHJkrJujG7A==",
+      "dependencies": [
+        "@stdlib/assert-has-tostringtag-support",
+        "@stdlib/number-ctor",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-object-like@0.2.2": {
+      "integrity": "sha512-MjQBpHdEebbJwLlxh/BKNH8IEHqY0YlcCMRKOQU0UOlILSJg0vG+GL4fDDqtx9FSXxcTqC+w3keHx8kAKvQhzg==",
+      "dependencies": [
+        "@stdlib/assert-tools-array-function",
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/assert-is-object@0.2.2": {
+      "integrity": "sha512-sNnphJuHyMDHHHaonlx6vaCKMe4sHOn0ag5Ck4iW3kJtM2OZB2J4h8qFcwKzlMk7fgFu7vYNGCZtpm1dYbbUfQ==",
+      "dependencies": [
+        "@stdlib/assert-is-array"
+      ]
+    },
+    "@stdlib/assert-is-plain-object@0.2.2": {
+      "integrity": "sha512-o4AFWgBsSNzZAOOfIrxoDFYTqnLuGiaHDFwIeZGUHdpQeav2Fll+sGeaqOcekF7yKawoswnwWdJqTsjapb4Yzw==",
+      "dependencies": [
+        "@stdlib/assert-has-own-property",
+        "@stdlib/assert-is-function",
+        "@stdlib/assert-is-object",
+        "@stdlib/utils-get-prototype-of",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-regexp@0.2.2": {
+      "integrity": "sha512-2JtiUtRJxPaVXL7dkWoV3n5jouI65DwYDXsDXg3xo23TXlTNGgU/HhKO4FWC1Yqju7YMZi0hcZSW6E9v8ISqeQ==",
+      "dependencies": [
+        "@stdlib/assert-has-tostringtag-support",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-string@0.2.2": {
+      "integrity": "sha512-SOkFg4Hq443hkadM4tzcwTHWvTyKP9ULOZ8MSnnqmU0nBX1zLVFLFGY8jnF6Cary0dL0V7QQBCfuxqKFM6u2PQ==",
+      "dependencies": [
+        "@stdlib/assert-has-tostringtag-support",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-uint16array@0.2.2": {
+      "integrity": "sha512-w3+HeTiXGLJGw5nCqr0WbvgArNMEj7ulED1Yd19xXbmmk2W1ZUB+g9hJDOQTiKsTU4AVyH4/As+aA8eDVmWtmg==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-uint32array@0.2.2": {
+      "integrity": "sha512-3F4nIHg1Qp0mMIsImWUC8DwQ3qBK5vdIJTjS2LufLbFBhHNmv5kK1yJiIXQDTLkENU0STZe05TByo01ZNLOmDQ==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-is-uint8array@0.2.2": {
+      "integrity": "sha512-51WnDip6H2RrN0CbqWmfqySAjam8IZ0VjlfUDc3PtcgrZGrKKjVgyHAsT/L3ZDydwF+aB94uvYJu5QyrCPNaZw==",
+      "dependencies": [
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/assert-tools-array-function@0.2.2": {
+      "integrity": "sha512-FYeT7X9x0C8Nh+MN6IJUDz+7i7yB6mio2/SDlrvyepjyPSU/cfHfwW0GEOnQhxZ+keLZC/YqDD930WjRODwMdA==",
+      "dependencies": [
+        "@stdlib/assert-is-array",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-format"
+      ]
+    },
+    "@stdlib/boolean-ctor@0.2.2": {
+      "integrity": "sha512-qIkHzmfxDvGzQ3XI9R7sZG97QSaWG5TvWVlrvcysOGT1cs6HtQgnf4D//SRzZ52VLm8oICP+6OKtd8Hpm6G7Ww=="
+    },
+    "@stdlib/complex-float32-ctor@0.0.2": {
+      "integrity": "sha512-QsTLynhTRmDT0mSkfdHj0FSqQSxh2nKx+vvrH3Y0/Cd/r0WoHFZwyibndDxshfkf9B7nist8QKyvV82I3IZciA==",
+      "dependencies": [
+        "@stdlib/assert-is-number",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/number-float64-base-to-float32",
+        "@stdlib/string-format",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-define-property"
+      ]
+    },
+    "@stdlib/complex-float32-reim@0.1.2": {
+      "integrity": "sha512-24H+t1xwQF6vhOoMZdDA3TFB4M+jb5Swm/FwNaepovlzVIG2NlthUZs6mZg1T3oegqesIRQRwhpn4jIPjuGiTw==",
+      "dependencies": [
+        "@stdlib/array-float32",
+        "@stdlib/complex-float32-ctor"
+      ]
+    },
+    "@stdlib/complex-float64-ctor@0.0.3": {
+      "integrity": "sha512-oixCtBif+Uab2rKtgedwQTbQTEC+wVSu4JQH935eJ8Jo0eL6vXUHHlVrkLgYKlCDLvq5px1QQn42Czg/ixh6Gw==",
+      "dependencies": [
+        "@stdlib/assert-is-number",
+        "@stdlib/complex-float32-ctor",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-format",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-define-property"
+      ]
+    },
+    "@stdlib/complex-float64-reim@0.1.2": {
+      "integrity": "sha512-q6RnfgbUunApAYuGmkft1oOM3x3xVMVJwNRlRgfIXwKDb8pYt+S/CeIwi3Su5SF6ay3AqA1s+ze7m21osXAJyw==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/complex-float64-ctor"
+      ]
+    },
+    "@stdlib/constants-float64-exponent-bias@0.2.2": {
+      "integrity": "sha512-zLWkjzDYHSsBsXB/4mwHysOGl64JS3XBt/McjvjCLc/IZpfsUNFxLCl7oVCplXzYYHcQj/RfEBFy6cxQ6FvdpQ=="
+    },
+    "@stdlib/constants-float64-high-word-abs-mask@0.2.2": {
+      "integrity": "sha512-YtYngcHlw9qvOpmsSlkNHi6cy/7Y7QkyYh5kJbDvuOUXPDKa3rEwBln4mKjbWsXhmmN0bk7TLypH7Ryd/UAjUQ=="
+    },
+    "@stdlib/constants-float64-high-word-exponent-mask@0.2.2": {
+      "integrity": "sha512-LhYUXvpnLOFnWr8ucHA9N/H75VxcS2T9EoBDTmWBZoKj2Pg0icGVDmcNciRLIWbuPA9osgcKpxoU+ADIfaipVA=="
+    },
+    "@stdlib/constants-float64-high-word-sign-mask@0.2.1": {
+      "integrity": "sha512-Fep/Ccgvz5i9d5k96zJsDjgXGno8HJfmH7wihLmziFmA2z9t7NSacH4/BH4rPJ5yXFHLkacNLDxaF1gO1XpcLA=="
+    },
+    "@stdlib/constants-float64-high-word-significand-mask@0.2.2": {
+      "integrity": "sha512-eDDyiQ5PR1/qyklrW0Pus0ZopM7BYjkWTjqhSHhj0DibH6UMwSMlIl4ddCh3VX37p5eByuAavnaPgizk5c9mUw=="
+    },
+    "@stdlib/constants-float64-ln-two@0.2.2": {
+      "integrity": "sha512-EQ8EJ6B1wPfuhva0aApKIsF7lTna++txV4AUzL2wTfwDHw6RzWpA44u+k54KnLF8ZXUNIYDNQHHvtzdfKrFzCA=="
+    },
+    "@stdlib/constants-float64-max-base2-exponent-subnormal@0.2.1": {
+      "integrity": "sha512-D1wBNn54Hu2pK6P/yBz0FtPBI3/7HdgK8igYjWDKWUKzC92R/6PHZ9q5NzedcGxoBs8MUk1zNpP0tZyYj9Y4YQ=="
+    },
+    "@stdlib/constants-float64-max-base2-exponent@0.2.2": {
+      "integrity": "sha512-KmDe98pJ2HXz2SbqyFfSDhlSSVD7JssjbZ5K11HEK2avqMcoCbdHH20T+6/TpA01VqaK8dLbeyphOfALcDdMKA=="
+    },
+    "@stdlib/constants-float64-min-base2-exponent-subnormal@0.2.1": {
+      "integrity": "sha512-fTXfvctXWj/48gK+gbRBrHuEHEKY4QOJoXSGp414Sz6vUxHusHJJ686p8ze3XqM7CY6fmL09ZgdGz/uhJl/7lw=="
+    },
+    "@stdlib/constants-float64-ninf@0.2.2": {
+      "integrity": "sha512-Iu+wZs/vgudAKVg9FEcRY3FadkmvsWuq/wJ3jIHjhaP5xcnoF3XJUO4IneEndybHwehfJL65NShnDsJcg1gicw==",
+      "dependencies": [
+        "@stdlib/number-ctor"
+      ]
+    },
+    "@stdlib/constants-float64-pinf@0.2.2": {
+      "integrity": "sha512-UcwnWaSkUMD8QyKADwkXPlY7yOosCPZpE2EDXf/+WOzuWi5vpsec+JaasD5ggAN8Rv8OTVmexTFs1uZfrHgqVQ=="
+    },
+    "@stdlib/constants-float64-smallest-normal@0.2.2": {
+      "integrity": "sha512-GXNBkdqLT9X+dU59O1kmb7W5da/RhSXSvxx0xG5r7ipJPOtRLfTXGGvvTzWD4xA3Z5TKlrEL6ww5sph9BsPJnA=="
+    },
+    "@stdlib/constants-float64-sqrt-two@0.2.2": {
+      "integrity": "sha512-iqqouCuS9pUhjD91i5siScxLDtQTF1HsSZor6jaZRviMiOjCj/mjzxxTFHWUlU/rxHMBBhj/u7i12fv6a7dCAQ=="
+    },
+    "@stdlib/constants-uint16-max@0.2.2": {
+      "integrity": "sha512-qaFXbxgFnAkt73P5Ch7ODb0TsOTg0LEBM52hw6qt7+gTMZUdS0zBAiy5J2eEkTxA9rD9X3nIyUtLf2C7jafNdw=="
+    },
+    "@stdlib/constants-uint32-max@0.2.2": {
+      "integrity": "sha512-2G44HQgIKDrh3tJUkmvtz+eM+uwDvOMF+2I3sONcTHacANb+zP7la4LDYiTp+HFkPJyfh/kPapXBiHpissAb1A=="
+    },
+    "@stdlib/constants-uint8-max@0.2.2": {
+      "integrity": "sha512-ZTBQq3fqS/Y4ll6cPY5SKaS266EfmKP9PW3YLJaTELmYIzVo9w2RFtfCqN05G3olTQ6Le9MUEE/C6VFgZNElDQ=="
+    },
+    "@stdlib/error-tools-fmtprodmsg@0.2.2": {
+      "integrity": "sha512-2IliQfTes4WV5odPidZFGD5eYDswZrPXob7oOu95Q69ERqImo8WzSwnG2EDbHPyOyYCewuMfM5Ha6Ggf+u944Q=="
+    },
+    "@stdlib/fs-exists@0.2.2": {
+      "integrity": "sha512-uGLqc7izCIam2aTyv0miyktl4l8awgRkCS39eIEvvvnKIaTBF6pxfac7FtFHeEQKE3XhtKsOmdQ/yJjUMChLuA==",
+      "dependencies": [
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/fs-resolve-parent-path@0.2.2": {
+      "integrity": "sha512-ZG78ouZc+pdPLtU+sSpYTvbKTiLUgn6NTtlVFYmcmkYRFn+fGOOakwVuhYMcYG6ti10cLD6WzB/YujxIt8f+nA==",
+      "dependencies": [
+        "@stdlib/assert-has-own-property",
+        "@stdlib/assert-is-function",
+        "@stdlib/assert-is-plain-object",
+        "@stdlib/assert-is-string",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/fs-exists",
+        "@stdlib/process-cwd",
+        "@stdlib/string-format",
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/math-base-assert-is-even@0.2.3": {
+      "integrity": "sha512-cziGv8F/aNyfME7Wx2XJjnYBnf9vIeh8yTIzlLELd0OqGHqfsHU5OQxxcl9x5DbjZ1G/w0lphWxHFHYCuwFCHw==",
+      "dependencies": [
+        "@stdlib/math-base-assert-is-integer",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-assert-is-infinite@0.2.2": {
+      "integrity": "sha512-4zDZuinC3vkXRdQepr0ZTwWX3KgM0VIWqYthOmCSgLLA87L9M9z9MgUZL1QeYeYa0+60epjDcQ8MS3ecT70Jxw==",
+      "dependencies": [
+        "@stdlib/constants-float64-ninf",
+        "@stdlib/constants-float64-pinf",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-assert-is-integer@0.2.5": {
+      "integrity": "sha512-Zi8N66GbWtSCR3OUsRdBknjNlX+aBN8w6CaVEP5+Jy/a7MgMYzevS52TNS5sm8jqzKBlFhZlPLex+Zl2GlPvSA==",
+      "dependencies": [
+        "@stdlib/math-base-special-floor",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-assert-is-nan@0.2.2": {
+      "integrity": "sha512-QVS8rpWdkR9YmHqiYLDVLsCiM+dASt/2feuTl4T/GSdou3Y/PS/4j/tuDvCDoHDNfDkULUW+FCVjKYpbyoeqBQ==",
+      "dependencies": [
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-assert-is-odd@0.3.0": {
+      "integrity": "sha512-V44F3xdR5/bHXqqYvE/AldLnVmijLr/rgf7EjnJXXDQLfPCgemy0iHTFl19N68KG1YO9SMPdyOaNjh4K0O9Qqw==",
+      "dependencies": [
+        "@stdlib/math-base-assert-is-even",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-napi-binary@0.3.0": {
+      "integrity": "sha512-bhwsmGMOMN1srcpNAFRjDMSXe9ue1s/XmaoBBlqcG6S2nqRQlIVnKKH4WZx4hmC1jDqoFXuNPJGE47VXpVV+mA==",
+      "dependencies": [
+        "@stdlib/complex-float32-ctor",
+        "@stdlib/complex-float32-reim",
+        "@stdlib/complex-float64-ctor",
+        "@stdlib/complex-float64-reim",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-napi-unary@0.2.3": {
+      "integrity": "sha512-BCyJmpq2S8EFo2yMt1z+v1EL7nn8RHcM6jn7fa8n3BTP679K0MSlawIh3A0CFogfrTdjPM4G44VO1ddsdLExcg==",
+      "dependencies": [
+        "@stdlib/complex-float32-ctor",
+        "@stdlib/complex-float32-reim",
+        "@stdlib/complex-float64-ctor",
+        "@stdlib/complex-float64-reim",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-abs@0.2.2": {
+      "integrity": "sha512-cw5CXj05c/L0COaD9J+paHXwmoN5IBYh+Spk0331f1pEMvGxSO1KmCREZaooUEEFKPhKDukEHKeitja2yAQh4Q==",
+      "dependencies": [
+        "@stdlib/constants-float64-high-word-abs-mask",
+        "@stdlib/math-base-napi-unary",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-copysign@0.2.2": {
+      "integrity": "sha512-m9nWIQhKsaNrZtS2vIPeToWDbzs/T0d0NWy7gSci38auQVufSbF6FYnCKl0f+uwiWlh5GYXs0uVbyCp7FFXN+A==",
+      "dependencies": [
+        "@stdlib/constants-float64-high-word-abs-mask",
+        "@stdlib/constants-float64-high-word-sign-mask",
+        "@stdlib/math-base-napi-binary",
+        "@stdlib/number-float64-base-from-words",
+        "@stdlib/number-float64-base-get-high-word",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-floor@0.2.3": {
+      "integrity": "sha512-zTkxVRawtWwJ4NmAT/1e+ZsIoBj1JqUquGOpiNVGNIKtyLOeCONZlZSbN7zuxPkshvmcSjpQ/VLKR8Tw/37E9A==",
+      "dependencies": [
+        "@stdlib/math-base-napi-unary",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-ldexp@0.2.3": {
+      "integrity": "sha512-yD4YisQGVTJmTJUshuzpaoq34sxJtrU+Aw4Ih39mzgXiQi6sh3E3nijB8WXDNKr2v05acUWJ1PRMkkJSfu16Kg==",
+      "dependencies": [
+        "@stdlib/constants-float64-exponent-bias",
+        "@stdlib/constants-float64-max-base2-exponent",
+        "@stdlib/constants-float64-max-base2-exponent-subnormal",
+        "@stdlib/constants-float64-min-base2-exponent-subnormal",
+        "@stdlib/constants-float64-ninf",
+        "@stdlib/constants-float64-pinf",
+        "@stdlib/math-base-assert-is-infinite",
+        "@stdlib/math-base-assert-is-nan",
+        "@stdlib/math-base-special-abs",
+        "@stdlib/math-base-special-copysign",
+        "@stdlib/number-float32-base-to-word",
+        "@stdlib/number-float64-base-exponent",
+        "@stdlib/number-float64-base-from-words",
+        "@stdlib/number-float64-base-normalize",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-pow@0.3.0": {
+      "integrity": "sha512-sMDYRUYGFyMXDHcCYy7hE07lV7jgI6rDspLMROKyESWcH4n8j54XE4/0w0i8OpdzR40H895MaPWU/tVnU1tP6w==",
+      "dependencies": [
+        "@stdlib/constants-float64-exponent-bias",
+        "@stdlib/constants-float64-high-word-abs-mask",
+        "@stdlib/constants-float64-high-word-significand-mask",
+        "@stdlib/constants-float64-ln-two",
+        "@stdlib/constants-float64-ninf",
+        "@stdlib/constants-float64-pinf",
+        "@stdlib/math-base-assert-is-infinite",
+        "@stdlib/math-base-assert-is-integer",
+        "@stdlib/math-base-assert-is-nan",
+        "@stdlib/math-base-assert-is-odd",
+        "@stdlib/math-base-napi-binary",
+        "@stdlib/math-base-special-abs",
+        "@stdlib/math-base-special-copysign",
+        "@stdlib/math-base-special-ldexp",
+        "@stdlib/math-base-special-sqrt",
+        "@stdlib/number-float64-base-get-high-word",
+        "@stdlib/number-float64-base-set-high-word",
+        "@stdlib/number-float64-base-set-low-word",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/number-uint32-base-to-int32",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-special-sqrt@0.2.2": {
+      "integrity": "sha512-YWxe9vVE5blDbRPDAdZfU03vfGTBHy/8pLDa/qLz7SiJj5n5sVWKObdbMR2oPHF4c6DaZh4IYkrcHFleiY8YkQ==",
+      "dependencies": [
+        "@stdlib/math-base-napi-unary",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/math-base-tools-hermitepoly@0.2.2": {
+      "integrity": "sha512-rd7HMTYUbv+85jpq0hnULv5nBmKfnrAvINkVXKAiL9NouadVztjjbLwpsIySjl9xGgPJ/dsS8rbBFMvvch26+Q==",
+      "dependencies": [
+        "@stdlib/constants-float64-sqrt-two",
+        "@stdlib/math-base-assert-is-integer",
+        "@stdlib/math-base-assert-is-nan",
+        "@stdlib/math-base-special-pow",
+        "@stdlib/math-base-tools-normhermitepoly",
+        "@stdlib/utils-constant-function",
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/math-base-tools-normhermitepoly@0.2.2": {
+      "integrity": "sha512-Qi678JGCiL0PGiRFk1YMJO/r7mD2s6QCF1IRhPNAXTAwfCXkgrZJamNgPKGrOzepkzlKhWJjPWj+C1wl0iw/tA==",
+      "dependencies": [
+        "@stdlib/math-base-assert-is-integer",
+        "@stdlib/math-base-assert-is-nan",
+        "@stdlib/utils-constant-function",
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/number-ctor@0.2.2": {
+      "integrity": "sha512-98pL4f1uiXVIw9uRV6t4xecMFUYRRTUoctsqDDV8MSRtKEYDzqkWCNz/auupJFJ135L1ejzkejh73fASsgcwKQ=="
+    },
+    "@stdlib/number-float32-base-to-word@0.2.2": {
+      "integrity": "sha512-/I866ocLExPpAjgZnHAjeaBw3ZHg5tVPcRdJoTPEiBG2hwD/OonHdCsfB9lu6FxO6sbp7I9BR1JolCoEyrhmYg==",
+      "dependencies": [
+        "@stdlib/array-float32",
+        "@stdlib/array-uint32",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-exponent@0.2.2": {
+      "integrity": "sha512-mYivBQKCuu54ulorf5A5rIhFaGPjGvmtkxhvK14q7gzRA80si83dk8buUsLpeeYsakg7yLn10RCVjBEP9/gm7Q==",
+      "dependencies": [
+        "@stdlib/constants-float64-exponent-bias",
+        "@stdlib/constants-float64-high-word-exponent-mask",
+        "@stdlib/number-float64-base-get-high-word",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-from-words@0.2.2": {
+      "integrity": "sha512-SzMDXSnIDZ8l3PDmtN9TPKTf0mUmh83kKCtj4FisKTcTbcmUmT/ovmrpMTiqdposymjHBieNvGiCz/K03NmlAA==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/array-uint32",
+        "@stdlib/assert-is-little-endian",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-get-high-word@0.2.2": {
+      "integrity": "sha512-LMNQAHdLZepKOFMRXAXLuq30GInmEdTtR0rO7Ka4F3m7KpYvw84JMyvZByMQHBu+daR6JNr2a/o9aFjmVIe51g==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/array-uint32",
+        "@stdlib/assert-is-little-endian",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-normalize@0.2.3": {
+      "integrity": "sha512-HT+3fhYZOEg2JgHBWS/ysc9ZveQZV10weKbtxhLHOsvceQVp1GbThsLik62mU2/3f96S9MgiVfPfSDI3jnBoYw==",
+      "dependencies": [
+        "@stdlib/constants-float64-smallest-normal",
+        "@stdlib/math-base-assert-is-infinite",
+        "@stdlib/math-base-assert-is-nan",
+        "@stdlib/math-base-special-abs",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-set-high-word@0.2.2": {
+      "integrity": "sha512-bLvH15GJgX5URMaOOJAQgO8/dCJPYUQoXPZH7ecSC3XnnVMfWEf43knkjEGYCnWp4nro5hPRElbtdV4mKEjpUg==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/array-uint32",
+        "@stdlib/assert-is-little-endian",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-set-low-word@0.2.2": {
+      "integrity": "sha512-E1pGjTwacJ+Tkt5rKQNdwitKnM1iDgMlulYosNdn6CtvU0Pkq359bNhscMscxehdY3MifwuJpuGzDWD2EGUXzQ==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/array-uint32",
+        "@stdlib/assert-is-little-endian",
+        "@stdlib/number-float64-base-to-words",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-float64-base-to-float32@0.2.2": {
+      "integrity": "sha512-T5snDkVNZY6pomrSW/qLWQfZ9JHgqCFLi8jaaarfNj2o+5NMUuvvRifLUIacTm8/uC96xB0j3+wKTh1zbIV5ig==",
+      "dependencies": [
+        "@stdlib/array-float32"
+      ]
+    },
+    "@stdlib/number-float64-base-to-words@0.2.2": {
+      "integrity": "sha512-nkFHHXoMhb3vcfl7ZvzgiNdqBdBfbKxHtgvDXRxrNQoVmyYbnjljjYD489d2/TAhe+Zvn7qph6QLgTod3zaeww==",
+      "dependencies": [
+        "@stdlib/array-float64",
+        "@stdlib/array-uint32",
+        "@stdlib/assert-is-little-endian",
+        "@stdlib/os-byte-order",
+        "@stdlib/os-float-word-order",
+        "@stdlib/utils-define-nonenumerable-read-only-property",
+        "@stdlib/utils-library-manifest"
+      ]
+    },
+    "@stdlib/number-uint32-base-to-int32@0.2.2": {
+      "integrity": "sha512-NPADfdHE/3VEifKDttXM24dRj5YQqxwh2wTRD8fQrpHeaWiMIUo8yDqWrrFNIdLVAcqjL2SwWpo4VJ7oKTYaIA=="
+    },
+    "@stdlib/object-ctor@0.2.1": {
+      "integrity": "sha512-HEIBBpfdQS9Nh5mmIqMk9fzedx6E0tayJrVa2FD7No86rVuq/Ikxq1QP7qNXm+i6z9iNUUS/lZq7BmJESWO/Zg=="
+    },
+    "@stdlib/os-byte-order@0.2.2": {
+      "integrity": "sha512-2y6rHAvZo43YmZu9u/E/7cnqZa0hNTLoIiMpV1IxQ/7iv03xZ45Z3xyvWMk0b7bAWwWL7iUknOAAmEchK/kHBA==",
+      "dependencies": [
+        "@stdlib/assert-is-big-endian",
+        "@stdlib/assert-is-little-endian"
+      ]
+    },
+    "@stdlib/os-float-word-order@0.2.2": {
+      "integrity": "sha512-5xpcEuxv/CudKctHS5czKdM7Bj/gC+sm/5R5bRPYyqxANM67t365j3v2v8rmmOxkEp9t0fa8Dggx8VmOkpJXaA==",
+      "dependencies": [
+        "@stdlib/os-byte-order"
+      ]
+    },
+    "@stdlib/process-cwd@0.2.2": {
+      "integrity": "sha512-8Q/nA/ud5d5PEzzG6ZtKzcOw+RMLm5CWR8Wd+zVO5vcPj+JD7IV7M2lBhbzfUzr63Torrf/vEhT3cob8vUHV/A=="
+    },
+    "@stdlib/regexp-extended-length-path@0.2.2": {
+      "integrity": "sha512-z3jqauEsaxpsQU3rj1A1QnOgu17pyW5kt+Az8QkoTk7wqNE8HhPikI6k4o7XBHV689rSFWZCl4c4W+7JAiNObQ==",
+      "dependencies": [
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/regexp-function-name@0.2.2": {
+      "integrity": "sha512-0z/KRsgHJJ3UQkmBeLH+Nin0hXIeA+Fw1T+mnG2V5CHnTA6FKlpxJxWrvwLEsRX7mR/DNtDp06zGyzMFE/4kig==",
+      "dependencies": [
+        "@stdlib/utils-define-nonenumerable-read-only-property"
+      ]
+    },
+    "@stdlib/string-base-format-interpolate@0.2.2": {
+      "integrity": "sha512-i9nU9rAB2+o/RR66TS9iQ8x+YzeUDL1SGiAo6GY3hP6Umz5Dx9Qp/v8T69gWVsb4a1YSclz5+YeCWaFgwvPjKA=="
+    },
+    "@stdlib/string-base-format-tokenize@0.2.2": {
+      "integrity": "sha512-kXq2015i+LJjqth5dN+hYnvJXBSzRm8w0ABWB5tYAsIuQTpQK+mSo2muM8JBEFEnqUHAwpUsu2qNTK/9o8lsJg=="
+    },
+    "@stdlib/string-base-lowercase@0.4.0": {
+      "integrity": "sha512-IH35Z5e4T+S3b3SfYY39mUhrD2qvJVp4VS7Rn3+jgj4+C3syocuAPsJ8C4OQXWGfblX/N9ymizbpFBCiVvMW8w=="
+    },
+    "@stdlib/string-base-replace@0.2.2": {
+      "integrity": "sha512-Y4jZwRV4Uertw7AlA/lwaYl1HjTefSriN5+ztRcQQyDYmoVN3gzoVKLJ123HPiggZ89vROfC+sk/6AKvly+0CA=="
+    },
+    "@stdlib/string-format@0.2.2": {
+      "integrity": "sha512-GUa50uxgMAtoItsxTbMmwkyhIwrCxCrsjzk3nAbLnt/1Kt1EWOWMwsALqZdD6K4V/xSJ4ns6PZur3W6w+vKk9g==",
+      "dependencies": [
+        "@stdlib/string-base-format-interpolate",
+        "@stdlib/string-base-format-tokenize"
+      ]
+    },
+    "@stdlib/string-replace@0.2.2": {
+      "integrity": "sha512-czNS5IU7sBuHjac45Y3VWUTsUoi82yc8JsMZrOMcjgSrEuDrVmA6sNJg7HC1DuSpdPjm/v9uUk102s1gIfk3Nw==",
+      "dependencies": [
+        "@stdlib/assert-is-function",
+        "@stdlib/assert-is-regexp",
+        "@stdlib/assert-is-string",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-base-replace",
+        "@stdlib/string-format",
+        "@stdlib/utils-escape-regexp-string"
+      ]
+    },
+    "@stdlib/symbol-ctor@0.2.2": {
+      "integrity": "sha512-XsmiTfHnTb9jSPf2SoK3O0wrNOXMxqzukvDvtzVur1XBKfim9+seaAS4akmV1H3+AroAXQWVtde885e1B6jz1w=="
+    },
+    "@stdlib/utils-constant-function@0.2.2": {
+      "integrity": "sha512-ezRenGy5zU4R0JTfha/bpF8U+Hx0b52AZV++ca/pcaQVvPBRkgCsJacXX0eDbexoBB4+ZZ1vcyIi4RKJ0RRlbQ=="
+    },
+    "@stdlib/utils-constructor-name@0.2.2": {
+      "integrity": "sha512-TBtO3MKDAf05ij5ajmyBCbpKKt0Lfahn5tu18gqds4PkFltgcw5tVZfSHY5DZ2HySJQ2GMMYjPW2Kbg6yPCSVg==",
+      "dependencies": [
+        "@stdlib/assert-is-buffer",
+        "@stdlib/regexp-function-name",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/utils-convert-path@0.2.2": {
+      "integrity": "sha512-8nNuAgt23Np9NssjShUrPK42c6gRTweGuoQw+yTpTfBR9VQv8WFyt048n8gRGUlAHizrdMNpEY9VAb7IBzpVYw==",
+      "dependencies": [
+        "@stdlib/assert-is-string",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/regexp-extended-length-path",
+        "@stdlib/string-base-lowercase",
+        "@stdlib/string-format",
+        "@stdlib/string-replace"
+      ]
+    },
+    "@stdlib/utils-define-nonenumerable-read-only-property@0.2.2": {
+      "integrity": "sha512-V3mpAesJemLYDKG376CsmoczWPE/4LKsp8xBvUxCt5CLNAx3J/1W39iZQyA5q6nY1RStGinGn1/dYZwa8ig0Uw==",
+      "dependencies": [
+        "@stdlib/utils-define-property"
+      ]
+    },
+    "@stdlib/utils-define-property@0.2.4": {
+      "integrity": "sha512-XlMdz7xwuw/sqXc9LbsV8XunCzZXjbZPC+OAdf4t4PBw4ZRwGzlTI6WED+f4PYR5Tp9F1cHgLPyMYCIBfA2zRg==",
+      "dependencies": [
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-format"
+      ]
+    },
+    "@stdlib/utils-escape-regexp-string@0.2.2": {
+      "integrity": "sha512-areCibzgpmvm6pGKBg+mXkSDJW4NxtS5jcAT7RtunGMdAYhA/I5whISMPaeJkIT2XhjjFkjKBaIs5pF6aPr4fQ==",
+      "dependencies": [
+        "@stdlib/assert-is-string",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-format"
+      ]
+    },
+    "@stdlib/utils-get-prototype-of@0.2.2": {
+      "integrity": "sha512-eDb1BAvt7GW/jduBkfuQrUsA9p09mV8RW20g0DWPaxci6ORYg/UB0tdbAA23aZz2QUoxdYY5s/UJxlq/GHwoKQ==",
+      "dependencies": [
+        "@stdlib/assert-is-function",
+        "@stdlib/object-ctor",
+        "@stdlib/utils-native-class"
+      ]
+    },
+    "@stdlib/utils-global@0.2.2": {
+      "integrity": "sha512-A4E8VFHn+1bpfJ4PA8H2b62CMQpjv2A+H3QDEBrouLFWne0wrx0TNq8vH6VYHxx9ZRxhgWQjfHiSAxtUJobrbQ==",
+      "dependencies": [
+        "@stdlib/assert-is-boolean",
+        "@stdlib/error-tools-fmtprodmsg",
+        "@stdlib/string-format"
+      ]
+    },
+    "@stdlib/utils-library-manifest@0.2.2": {
+      "integrity": "sha512-YqzVLuBsB4wTqzdUtRArAjBJoT3x61iop2jFChXexhl6ejV3vDpHcukEEkqIOcJKut+1cG5TLJdexgHNt1C0NA==",
+      "dependencies": [
+        "@stdlib/fs-resolve-parent-path",
+        "@stdlib/utils-convert-path",
+        "debug",
+        "resolve"
+      ]
+    },
+    "@stdlib/utils-native-class@0.2.2": {
+      "integrity": "sha512-cSn/FozbEpfR/FlJAoceQtZ8yUJFhZ8RFkbEsxW/7+H4o09yln3lBS0HSfUJISYNtpTNN/2/Fup88vmvwspvwA==",
+      "dependencies": [
+        "@stdlib/assert-has-own-property",
+        "@stdlib/assert-has-tostringtag-support",
+        "@stdlib/symbol-ctor"
+      ]
+    },
+    "@stdlib/utils-type-of@0.2.2": {
+      "integrity": "sha512-RLGFxPNgY9AtVVrFGdKO6Y3pOd/Ov2WA4O2/czZN/AbgYzbPdoF0KkfvHRIney6k+TtvoyYB8YqZXJ4G88f9BQ==",
+      "dependencies": [
+        "@stdlib/utils-constructor-name",
+        "@stdlib/utils-global"
+      ]
+    },
+    "debug@2.6.9": {
+      "integrity": "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==",
+      "dependencies": [
+        "ms"
+      ]
+    },
+    "esbuild-wasm@0.23.1": {
+      "integrity": "sha512-L3vn7ctvBrtScRfoB0zG1eOCiV4xYvpLYWfe6PDZuV+iDFDm4Mt3xeLIDllG8cDHQ8clUouK3XekulE+cxgkgw=="
+    },
+    "esbuild@0.23.1": {
+      "integrity": "sha512-VVNz/9Sa0bs5SELtn3f7qhJCDPCF5oMEl5cO9/SSinpE9hbPVvxbd572HH5AKiP7WD8INO53GgfDDhRjkylHEg==",
+      "dependencies": [
+        "@esbuild/aix-ppc64",
+        "@esbuild/android-arm",
+        "@esbuild/android-arm64",
+        "@esbuild/android-x64",
+        "@esbuild/darwin-arm64",
+        "@esbuild/darwin-x64",
+        "@esbuild/freebsd-arm64",
+        "@esbuild/freebsd-x64",
+        "@esbuild/linux-arm",
+        "@esbuild/linux-arm64",
+        "@esbuild/linux-ia32",
+        "@esbuild/linux-loong64",
+        "@esbuild/linux-mips64el",
+        "@esbuild/linux-ppc64",
+        "@esbuild/linux-riscv64",
+        "@esbuild/linux-s390x",
+        "@esbuild/linux-x64",
+        "@esbuild/netbsd-x64",
+        "@esbuild/openbsd-arm64",
+        "@esbuild/openbsd-x64",
+        "@esbuild/sunos-x64",
+        "@esbuild/win32-arm64",
+        "@esbuild/win32-ia32",
+        "@esbuild/win32-x64"
+      ]
+    },
+    "function-bind@1.1.2": {
+      "integrity": "sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA=="
+    },
+    "hasown@2.0.2": {
+      "integrity": "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==",
+      "dependencies": [
+        "function-bind"
+      ]
+    },
+    "is-core-module@2.15.1": {
+      "integrity": "sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==",
+      "dependencies": [
+        "hasown"
+      ]
+    },
+    "ms@2.0.0": {
+      "integrity": "sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A=="
+    },
+    "path-parse@1.0.7": {
+      "integrity": "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw=="
+    },
+    "preact-render-to-string@6.5.11_preact@10.24.3": {
+      "integrity": "sha512-ubnauqoGczeGISiOh6RjX0/cdaF8v/oDXIjO85XALCQjwQP+SB4RDXXtvZ6yTYSjG+PC1QRP2AhPgCEsM2EvUw==",
+      "dependencies": [
+        "preact"
+      ]
+    },
+    "preact@10.24.3": {
+      "integrity": "sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA=="
+    },
+    "resolve@1.22.8": {
+      "integrity": "sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==",
+      "dependencies": [
+        "is-core-module",
+        "path-parse",
+        "supports-preserve-symlinks-flag"
+      ]
+    },
+    "supports-preserve-symlinks-flag@1.0.0": {
+      "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="
+    }
+  },
+  "redirects": {
+    "https://esm.sh/@types/webscreens-window-placement": "https://esm.sh/@types/webscreens-window-placement@0.1.3",
+    "https://esm.sh/@types/webscreens-window-placement@0.1.3": "https://esm.sh/v135/@types/webscreens-window-placement@0.1.3/index.d.ts"
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:preact@^10.24.3"
+    ],
+    "members": {
+      "cli": {
+        "dependencies": [
+          "jsr:@cliffy/command@^1.0.0-rc.7",
+          "jsr:@gfx/canvas-wasm@~0.4.2",
+          "jsr:@std/fs@^1.0.4"
+        ]
+      },
+      "core": {
+        "dependencies": [
+          "npm:@stdlib/math-base-tools-hermitepoly@~0.2.2"
+        ]
+      },
+      "gui": {
+        "dependencies": [
+          "jsr:@fresh/core@^2.0.0-alpha.23",
+          "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
+          "npm:@preact/signals@^1.3.0"
+        ]
+      }
+    }
+  }
+}
