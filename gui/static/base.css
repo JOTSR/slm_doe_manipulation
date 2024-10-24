@@ -1,0 +1,64 @@
+@property --accent-color {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: AccentColor;
+}
+
+:root {
+	accent-color: var(--accent-color);
+	--font-accent: 'Hepta Slap', serif;
+	--font-normal: 'Albert Sans', sans-serif;
+	--font-code: 'Cascadia Code', monospace;
+	--color: rgba(77, 46, 0, 1);
+	--bg-color: rgba(255, 233, 199, 1);
+}
+
+body {
+	font-family: var(--font-normal);
+	background-image: radial-gradient(rgba(77, 46, 0, 0.3) 2px, transparent 2px);
+	background-size: 40px 40px;
+	background-color: var(--bg-color);
+	color: var(--color);
+}
+
+main {
+	& > * {
+		border-radius: 0.4rem;
+	}
+}
+
+aside {
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(0.2rem);
+	box-shadow: 0 0 0.5rem 0.1rem rgba(77, 46, 0, 0.3);
+}
+
+.camera-preview {
+	background-color: gray;
+	opacity: 0.4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-primary,
+.grating-view {
+	border-radius: 0.4rem;
+	font-size: large;
+
+	color: var(--bg-color);
+	background: var(--color);
+	border: 0.1rem solid var(--color);
+	transition: all 0.1s ease;
+
+	&:active {
+		background-color: var(--bg-color);
+		color: var(--color);
+	}
+}
+
+.toolbox-layer {
+	background-color: rgba(77, 46, 0, 0.3);
+	border-radius: 0.4rem;
+	padding: 0.2rem;
+}
