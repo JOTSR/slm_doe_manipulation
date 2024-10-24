@@ -5,9 +5,9 @@
 
 ## [`/core`](./core)
 
-[![Static Badge](https://img.shields.io/badge/doc-core-blue?style=flat-square&logo=deno)](https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/mod.ts)
-[![Static Badge](https://img.shields.io/badge/doc-core%2Ftypes-blue?style=flat-square&logo=deno)](https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/types.ts)
-[![Static Badge](https://img.shields.io/badge/doc-core%2Fpatterns-blue?style=flat-square&logo=deno)](https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/patterns/mod.ts)
+[![Static Badge](https://img.shields.io/badge/doc-core-blue?style=flat-square&logo=deno)](https://doc.deno.land/https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/mod.ts)
+[![Static Badge](https://img.shields.io/badge/doc-core%2Ftypes-blue?style=flat-square&logo=deno)](https://doc.deno.land/https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/types.ts)
+[![Static Badge](https://img.shields.io/badge/doc-core%2Fpatterns-blue?style=flat-square&logo=deno)](https://doc.deno.land/https://raw.githubusercontent.com/JOTSR/slm_doe_manipulation/refs/heads/main/core/patterns/mod.ts)
 
 Creation and manipulation of gratings and patterns.
 
