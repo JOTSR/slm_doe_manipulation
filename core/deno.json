@@ -1,0 +1,12 @@
+{
+	"name": "@-/core",
+	"version": "0.1.0",
+	"exports": {
+		".": "./mod.ts",
+		"./patterns": "./patterns/mod.ts",
+		"./types": "./types.ts"
+	},
+	"imports": {
+		"@stdlib/math-base-tools-hermitepoly": "npm:@stdlib/math-base-tools-hermitepoly@^0.2.2"
+	}
+}
