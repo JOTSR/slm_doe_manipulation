@@ -321,6 +321,66 @@ export class Grating<Width extends number, Height extends number> {
 	}
 
 	/**
+	 * Boolean AND to grating and return a new grating resulted from the pixel per pixel "&".
+	 * Source gratings are left intact.
+	 */
+	and(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const andPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] &= andPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	/**
+	 * Boolean OR to grating and return a new grating resulted from the pixel per pixel "|".
+	 * Source gratings are left intact.
+	 */
+	or(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const orPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] |= orPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	/**
+	 * Boolean XOR to grating and return a new grating resulted from the pixel per pixel "^".
+	 * Source gratings are left intact.
+	 */
+	xor(
+		...gratings: Grating<Width, Height>[]
+	): Grating<Width, Height> {
+		const result = this.clone()
+		const pixels = result.rawPixels
+
+		for (const grating of gratings) {
+			const orPixels = grating.rawPixels
+			for (let i = 0; i < pixels.length; i++) {
+				pixels[i] ^= orPixels[i]
+			}
+		}
+
+		return result
+	}
+
+	/**
 	 * Clone the current Grating and return a new Grating with same size and same pixels.
 	 */
 	clone(): Grating<Width, Height> {

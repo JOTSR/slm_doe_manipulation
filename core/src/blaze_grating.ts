@@ -77,3 +77,8 @@ export function blazeGrating<Width extends number, Height extends number>(
 
 	return grating
 }
+
+/*
+circularBlazeGrating()
+
+*/
