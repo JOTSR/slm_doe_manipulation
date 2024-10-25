@@ -15,6 +15,8 @@ jobs:
       - name: Run test and coverage
         run: cd ./core && deno task test:coverage
       - name: Collect coverage
-        uses: codecov/codecov-action
+        uses: codecov/codecov-action@v4
         with:
           file: ./core/coverage.lcov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
