@@ -1,0 +1,20 @@
+name: CI for core API - test and coverage
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Run test and coverage
+        run: cd ./core && deno task test:coverage
+      - name: Collect coverage
+        uses: codecov/codecov-action
+        with:
+          file: ./core/coverage.lcov
