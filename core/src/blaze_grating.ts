@@ -11,9 +11,9 @@ import { Grating } from './grating.ts'
  * @example Example
  * ```ts
  * const blaze = {
- * 	max: 255 // i.e 0-2π in phase space.
- * 	count: 25 // i.e approximatively 10px width on a 256 pixel width screen.
- * 	tilt: Math.PI / 2 // i.e 45deg blaze grating.
+ * 	max: 255, // i.e 0-2π in phase space.
+ * 	count: 25, // i.e approximatively 10px width on a 256 pixel width screen.
+ * 	tilt: Math.PI / 2, // i.e 45deg blaze grating.
  * }
  * ```
  */
@@ -33,7 +33,7 @@ export type Blaze = {
  *
  * @example Usage
  * ```ts
- * const grating = blazeGrating(256, 256, { count: 25, height: 255, tilt: 0 })
+ * const grating = blazeGrating(256, 256, { count: 25, max: 255, tilt: 0 })
  * ```
  */
 export function blazeGrating<Width extends number, Height extends number>(

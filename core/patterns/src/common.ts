@@ -38,7 +38,7 @@ export function circle(
  * ```ts
  * const screenOrigin = { x: 255, y: 255 }
  * const smallBox = rect(
- * 	screeOrigin.x - 25,
+ * 	screenOrigin.x - 25,
  * 	screenOrigin.x + 25,
  * 	screenOrigin.y - 25,
  * 	screenOrigin.y + 25,
