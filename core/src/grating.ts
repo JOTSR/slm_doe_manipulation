@@ -306,14 +306,18 @@ export class Grating<Width extends number, Height extends number> {
 	 * Get a new Grating where each pixel is the opposite of the source (255 - pixel_component).
 	 */
 	oppose(): Grating<Width, Height> {
-		return this.mapRawPixels((value) => 255 - value)
+		return this.mapRawPixels((value, index) =>
+			index % 4 !== 3 ? 255 - value : value
+		)
 	}
 
 	/**
 	 * Get a new Grating where each pixel is the invert of the source (255 / pixel_component) % 256.
 	 */
 	invert(): Grating<Width, Height> {
-		return this.mapRawPixels((value) => 255 / value)
+		return this.mapRawPixels((value, index) =>
+			index % 4 !== 3 ? 255 / value : value
+		)
 	}
 
 	/**
