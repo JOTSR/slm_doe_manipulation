@@ -8,5 +8,9 @@
 	},
 	"imports": {
 		"@stdlib/math-base-tools-hermitepoly": "npm:@stdlib/math-base-tools-hermitepoly@^0.2.2"
-	}
+	},
+	"tasks": {
+		"build-doc": "deno doc --html --name='Core API' ./src/asserts.ts .src/blaze_grating.ts ./src/grating.ts ./types.ts ./patterns/mod.ts"
+	},
+	"exclude": ["./docs"]
 }
