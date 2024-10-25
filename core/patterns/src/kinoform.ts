@@ -7,15 +7,15 @@ import hermitepoly from '@stdlib/math-base-tools-hermitepoly'
  *
  * @param p - Coefficient of the Hermite-Gauss polynomial for `x` coordinate.
  * @param q - Coefficient of the Hermite-Gauss polynomial for `y` coordinate.
- * @param w0 - Natural pulsation of the laser.
+ * @param waist - Beam waist on the camera PIXELs.
  * @returns Pattern derived from the Hermite-Gauss kinoform.
  *
  * @example Usage
  * ```ts
  * import { Grating } from '@-/core'
  *
- * const w0 = 2 * Math.PI * 3e8 / 635e-9 // red laser of 635nm
- * const hgPattern = hermiteGaussKinoform(5, 3, w0)
+ * const waist = 41 // with a beam size of 41px on the camera
+ * const hgPattern = hermiteGaussKinoform(4, 4, waist)
  *
  * const hgGrating = Grating.fromPattern(256, 256, hgPattern) // screen of 256 x 256
  * ```
@@ -23,16 +23,16 @@ import hermitepoly from '@stdlib/math-base-tools-hermitepoly'
 export function hermiteGaussKinoform(
 	p: number,
 	q: number,
-	w0: number,
+	waist: number,
 ): Pattern {
 	const hermiteP = hermitepoly.factory(p)
 	const hermiteQ = hermitepoly.factory(q)
 
-	const prefactor = Math.SQRT2 / w0
-	const w2 = w0 ** 2
+	const prefactor = Math.SQRT2 / waist
+	const waist2 = waist ** 2
 
 	return (x, y) =>
 		hermiteP(prefactor * x) *
 		hermiteQ(prefactor * y) *
-		Math.exp(-(x ** 2 + y ** 2) / w2)
+		Math.exp(-(x ** 2 + y ** 2) / waist2)
 }

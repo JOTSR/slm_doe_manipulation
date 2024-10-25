@@ -12,11 +12,11 @@ const bg = blazeGrating(screenSize.width, screenSize.height, {
 	tilt: Math.PI * 50 / 180,
 })
 
-const w0 = 2 * Math.PI * 3e8 / 635e-9 //635nm pulsation
-const hgPattern = hermiteGaussKinoform(3, 7, w0)
+const waist = 41 // beam size on camera !IN PIXELS
+const hgPattern = hermiteGaussKinoform(4, 4, waist)
 const translated = new PatternTransformer()
 	// .rotate(0.2)
-	.scale(30, 30)
+	// .scale(30, 30)
 	.translate(-(screenSize.width / 2), -(screenSize.height / 2))
 	.transform(hgPattern)
 
