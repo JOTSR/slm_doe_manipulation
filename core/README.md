@@ -5,6 +5,7 @@
 [![Core doc link](https://img.shields.io/badge/doc-core-blue?style=flat-square&logo=deno)](https://jotsr.github.io/slm_doe_manipulation/)
 [![Core doc deployment status](https://img.shields.io/github/actions/workflow/status/JOTSR/slm_doe_manipulation/deploy-core-doc.yml?style=flat-square&logo=github&label=deploy%20doc)](https://github.com/JOTSR/slm_doe_manipulation/actions)
 [![Core CI status](https://img.shields.io/github/actions/workflow/status/JOTSR/slm_doe_manipulation/ci-core.yml?style=flat-square&logo=github&label=ci)](https://github.com/JOTSR/slm_doe_manipulation/actions)
+[![Codecov](https://img.shields.io/codecov/c/github/JOTSR/slm_doe_manipulation?style=flat-square&logo=codecov&logoColor=white&labelColor=f23384)](https://app.codecov.io/github/JOTSR/slm_doe_manipulation)
 
 Utilities to build a diffraction pattern on a SLM.
 
