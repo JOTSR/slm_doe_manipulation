@@ -14,5 +14,5 @@
 		"test": "deno lint && deno test --doc",
 		"test:coverage": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
 	},
-	"exclude": ["./docs"]
+	"exclude": ["./docs", "./corevage", "./coreverage.lcov"]
 }
